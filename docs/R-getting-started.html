@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bio724D - 1&nbsp; Getting Started with R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./R-intro-RMarkdown.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting Started with R</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Bio724D</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">R</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R-getting-started.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting Started with R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R-intro-RMarkdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R Markdown and R Notebooks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R-dplyr-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R-ggplot-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Unix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Unix-bash.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Unix-awk.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Awk</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link active" data-scroll-target="#what-is-r"><span class="toc-section-number">1.1</span>  What is R?</a></li>
+  <li><a href="#what-is-rstudio" id="toc-what-is-rstudio" class="nav-link" data-scroll-target="#what-is-rstudio"><span class="toc-section-number">1.2</span>  What is RStudio?</a></li>
+  <li><a href="#entering-commands-in-the-console" id="toc-entering-commands-in-the-console" class="nav-link" data-scroll-target="#entering-commands-in-the-console"><span class="toc-section-number">1.3</span>  Entering commands in the console</a></li>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments"><span class="toc-section-number">1.4</span>  Comments</a></li>
+  <li><a href="#using-r-as-a-calculator" id="toc-using-r-as-a-calculator" class="nav-link" data-scroll-target="#using-r-as-a-calculator"><span class="toc-section-number">1.5</span>  Using R as a Calculator</a>
+  <ul class="collapse">
+  <li><a href="#common-mathematical-functions" id="toc-common-mathematical-functions" class="nav-link" data-scroll-target="#common-mathematical-functions"><span class="toc-section-number">1.5.1</span>  Common mathematical functions</a></li>
+  </ul></li>
+  <li><a href="#variable-assignment" id="toc-variable-assignment" class="nav-link" data-scroll-target="#variable-assignment"><span class="toc-section-number">1.6</span>  Variable assignment</a>
+  <ul class="collapse">
+  <li><a href="#valid-variable-names" id="toc-valid-variable-names" class="nav-link" data-scroll-target="#valid-variable-names"><span class="toc-section-number">1.6.1</span>  Valid variable names</a></li>
+  </ul></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="toc-section-number">1.7</span>  Data types</a>
+  <ul class="collapse">
+  <li><a href="#numeric-data-types" id="toc-numeric-data-types" class="nav-link" data-scroll-target="#numeric-data-types"><span class="toc-section-number">1.7.1</span>  Numeric data types</a></li>
+  <li><a href="#logical-values" id="toc-logical-values" class="nav-link" data-scroll-target="#logical-values"><span class="toc-section-number">1.7.2</span>  Logical values</a></li>
+  <li><a href="#character-strings" id="toc-character-strings" class="nav-link" data-scroll-target="#character-strings"><span class="toc-section-number">1.7.3</span>  Character strings</a></li>
+  </ul></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages"><span class="toc-section-number">1.8</span>  Packages</a>
+  <ul class="collapse">
+  <li><a href="#installing-packages-from-the-console" id="toc-installing-packages-from-the-console" class="nav-link" data-scroll-target="#installing-packages-from-the-console"><span class="toc-section-number">1.8.1</span>  Installing packages from the console</a></li>
+  <li><a href="#install-the-tidyverse-package" id="toc-install-the-tidyverse-package" class="nav-link" data-scroll-target="#install-the-tidyverse-package"><span class="toc-section-number">1.8.2</span>  Install the tidyverse package</a></li>
+  <li><a href="#installing-packages-from-the-rstudio-dialog" id="toc-installing-packages-from-the-rstudio-dialog" class="nav-link" data-scroll-target="#installing-packages-from-the-rstudio-dialog"><span class="toc-section-number">1.8.3</span>  Installing packages from the RStudio dialog</a></li>
+  <li><a href="#loading-packages-with-the-library-function" id="toc-loading-packages-with-the-library-function" class="nav-link" data-scroll-target="#loading-packages-with-the-library-function"><span class="toc-section-number">1.8.4</span>  Loading packages with the <code>library()</code> function</a></li>
+  </ul></li>
+  <li><a href="#the-r-help-system" id="toc-the-r-help-system" class="nav-link" data-scroll-target="#the-r-help-system"><span class="toc-section-number">1.9</span>  The R Help System</a>
+  <ul class="collapse">
+  <li><a href="#getting-help-from-the-console" id="toc-getting-help-from-the-console" class="nav-link" data-scroll-target="#getting-help-from-the-console"><span class="toc-section-number">1.9.1</span>  Getting help from the console</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting Started with R</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="what-is-r" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-r"><span class="header-section-number">1.1</span> What is R?</h2>
+<p>R is a statistical computing environment and programming language. It is free, open source, and has a large and active community of developers and users. There are many different R packages (libraries) available for conducting out a wide variety of different analyses, for everything from genome sequence data to geospatial information.</p>
+</section>
+<section id="what-is-rstudio" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="what-is-rstudio"><span class="header-section-number">1.2</span> What is RStudio?</h2>
+<p>RStudio (http://www.rstudio.com/) is an open source integrated development environment (IDE) that provides a nicer graphical interface to R than does the default R GUI.</p>
+<p>The figure below illustrates the RStudio interface, in it’s default configuration. For the exercises below you’ll be primarily entering commands in the “console” window. We’ll review key parts of the RStudio interface in greater detail in class.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/fig-rstudio-panes-labeled.png" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption">RStudio window with the panes labeled</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="entering-commands-in-the-console" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="entering-commands-in-the-console"><span class="header-section-number">1.3</span> Entering commands in the console</h2>
+<p>You can type commands directly in the console. When you hit Return (Enter) on your keyboard the text you typed is evaluated by the R interpreter. This means that the R program reads your commands, makes sure there are no syntax errors, and then carries out any commands that were specified.</p>
+<p>Try evaluating the following arithmetic commands in the console:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">+</span> <span class="dv">5</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">-</span> <span class="dv">5</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">/</span> <span class="dv">5</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">*</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you type an incomplete command and then hit Return on your keyboard, the console will show a continuation line marked by a <code>+</code> symbol. For example enter the incomplete statement <code>(10 + 5</code> and then hit Enter. You should see something like this.</p>
+<pre><code>&gt; (10 + 5
++</code></pre>
+<p>The continuation line tells you that R is waiting for additional input before it evaluates what you typed. Either complete your command (e.g.&nbsp;type the closing parenthesis) and hit Return, or hit the “Esc” key to exit the continuation line without evaluating what you typed.</p>
+</section>
+<section id="comments" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="comments"><span class="header-section-number">1.4</span> Comments</h2>
+<p>When working in the R console, or writing R code, the pound symbol (<code>#</code>) indicates the start of a comment. Anything after the <code>#</code>, up to the end of the current line, is ignored by the R interpretter.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This line will be ignored</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">4</span> <span class="co"># the first part of this line, up to the #, will be evaluated</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Throughout this course I will often include short explanatory comments in my code examples.</p>
+<p>When I want to display the output generated by an R statement typed at the console I will generally use a display convention in which I prepend the results with the symbols <code>##</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">4</span>  <span class="co"># same as above but with output displayed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9</code></pre>
+</div>
+</div>
+</section>
+<section id="using-r-as-a-calculator" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="using-r-as-a-calculator"><span class="header-section-number">1.5</span> Using R as a Calculator</h2>
+<p>The simplest way to use R is as a fancy calculator. Evaluate each of the following statements in the console.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">+</span> <span class="dv">2</span> <span class="co"># addition</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">-</span> <span class="dv">2</span> <span class="co"># subtraction</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">*</span> <span class="dv">2</span> <span class="co"># multiplication</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">/</span> <span class="dv">2</span> <span class="co"># division</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">^</span> <span class="dv">2</span> <span class="co"># exponentiation</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">**</span> <span class="dv">2</span> <span class="co"># alternate exponentiation</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>pi <span class="sc">*</span> <span class="fl">2.5</span><span class="sc">^</span><span class="dv">2</span> <span class="co"># R knows about some constants such as Pi</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">%%</span> <span class="dv">3</span> <span class="co"># modulus operator -- gives remainder after division</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">%/%</span> <span class="dv">3</span> <span class="co"># integer division</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Be aware that certain operators have precedence over others. For example multiplication and division have higher precedence than addition and subtraction. Use parentheses to disambiguate potentially confusing statements.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span> <span class="sc">+</span> <span class="dv">2</span>)<span class="sc">/</span><span class="dv">4-5</span>   <span class="co"># was the output what you expected?</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span> <span class="sc">+</span> <span class="dv">2</span>)<span class="sc">/</span>(<span class="dv">4-5</span>) <span class="co"># compare the answer to the above</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Division by zero produces an object that represents infinite numbers. Infinite values can be either positive or negative</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">/</span><span class="dv">0</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] Inf</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span><span class="dv">1</span><span class="sc">/</span><span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -Inf</code></pre>
+</div>
+</div>
+<p>Invalid calculations produce a objected called <code>NaN</code> which is short for “Not a Number”:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span><span class="sc">/</span><span class="dv">0</span>  <span class="co"># invalid calculation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+</div>
+<section id="common-mathematical-functions" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="common-mathematical-functions"><span class="header-section-number">1.5.1</span> Common mathematical functions</h3>
+<p>Many commonly used mathematical functions are built into R. Here are some examples:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abs</span>(<span class="sc">-</span><span class="dv">3</span>)   <span class="co"># absolute value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cos</span>(pi<span class="sc">/</span><span class="dv">3</span>) <span class="co"># cosine</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sin</span>(pi<span class="sc">/</span><span class="dv">3</span>) <span class="co"># sine</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8660254</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">10</span>)   <span class="co"># natural logarithm</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.302585</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log10</span>(<span class="dv">10</span>) <span class="co"># log base 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log2</span>(<span class="dv">10</span>) <span class="co"># log base 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.321928</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="dv">1</span>)    <span class="co"># exponential function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.718282</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">10</span>)  <span class="co"># square root</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.162278</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="sc">^</span><span class="fl">0.5</span>  <span class="co"># same as square root</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.162278</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="variable-assignment" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="variable-assignment"><span class="header-section-number">1.6</span> Variable assignment</h2>
+<p>An important programming concept in all programming languages is that of “variable assignment”. Variable assignment is the act of creating labels that point to particular data values in a computers memory, which allows us to apply operations to the labels rather than directly to specific. Variable assignment is an important mechanism of abstracting and generalizing computational operations.</p>
+<p>Variable assignment in R is accomplished with the assignment operator, which is designated as <code>&lt;-</code> (left arrow, constructed from a left angular brack and the minus sign). This is illustrated below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span>  <span class="co"># assign the variable name 'x' the value 10</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sin</span>(x)   <span class="co"># apply the sin function to the value x points to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.5440211</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> pi  <span class="co"># x now points to a different value</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sin</span>(x)   <span class="co"># the same function call now produces a different result </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.224647e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>         <span class="co"># note that sin(pi) == 0, but R returns a floating point value very </span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>         <span class="co"># very close to but not zero</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="valid-variable-names" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="valid-variable-names"><span class="header-section-number">1.6.1</span> Valid variable names</h3>
+<p>As described in the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/make.names.html">R documentation</a>, “A syntactically valid name consists of letters, numbers and the dot or underline characters and starts with a letter or the dot not followed by a number. Names such as ‘.2way’ are not valid, and neither are the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html">reserved words</a>.”</p>
+<p>Here are some examples of valid and invalid variable names. Mentally evaluate these based on the definition above, and then evaluate these in the R interpetter to confirm your understanding :</p>
+<pre><code>x &lt;- 10
+x.prime &lt;- 10
+x_prime &lt;- 10
+my.long.variable.name &lt;- 10
+another_long_variable_name &lt;- 10
+_x &lt;- 10
+.x &lt;- 10
+2.x &lt;- 2 * x</code></pre>
+</section>
+</section>
+<section id="data-types" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="data-types"><span class="header-section-number">1.7</span> Data types</h2>
+<p>The phrase “data types” refers to the representations of information that a programming language provides. In R, there are three core data types representing numbes, logical values, and strings. You can use the function <code>typeof()</code> to get information about an objects type in R.</p>
+<section id="numeric-data-types" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="numeric-data-types"><span class="header-section-number">1.7.1</span> Numeric data types</h3>
+<p>There are three standard types of numbers in R.</p>
+<ol type="1">
+<li><p>“double” – this is the default numeric data type, and is used to represent both real numbers and whole numbers (unless you explicitly ask for integers, see below). “double” is short for “double precision floating point value”. All of the previous computations you’ve seen up until this point used data of type double.</p>
+<p>::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fl">10.0</span>)  <span class="co"># real number</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>::: {.cell-output .cell-output-stdout} <code>[1] "double"</code> :::</p>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">10</span>)  <span class="co"># whole numbers default to doubles</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>::: {.cell-output .cell-output-stdout} <code>[1] "double"</code> ::: :::</p></li>
+<li><p>“integer” – when your numeric data involves only whole numbers, you can get slighly better performance using the integer data type. You must explicitly ask for numbers to be treated as integers.</p>
+<p>::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">as.integer</span>(<span class="dv">10</span>))  <span class="co"># now treated as an integer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>::: {.cell-output .cell-output-stdout} <code>[1] "integer"</code> ::: :::</p></li>
+<li><p>“complex” – R has a built-in data type to represent complex numbers – numbers with a “real” and “imaginary” component. We won’t encounter the use of complex numbers in this course, but they do have many important uses in mathematics and engineering and also have some interesting applications in biology.</p>
+<p>::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">1</span> <span class="sc">+</span> 0i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>::: {.cell-output .cell-output-stdout} <code>[1] "complex"</code> :::</p>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="sc">-</span><span class="dv">1</span>)      <span class="co"># sqrt of -1, using doubles</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>::: {.cell-output .cell-output-stderr} <code>Warning in sqrt(-1): NaNs produced</code> :::</p>
+<p>::: {.cell-output .cell-output-stdout} <code>[1] NaN</code> :::</p>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> 0i) <span class="co"># sqrt of -1, using complex numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>::: {.cell-output .cell-output-stdout} <code>[1] 0+1i</code> ::: :::</p></li>
+</ol>
+</section>
+<section id="logical-values" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="logical-values"><span class="header-section-number">1.7.2</span> Logical values</h3>
+<p>When we compare values to each other, our calculations no longer return “doubles” but rather <code>TRUE</code> and <code>FALSE</code> values. This is illustrated below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;</span> <span class="dv">9</span>  <span class="co"># is 10 less than 9?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">9</span>  <span class="co"># is 10 greater than 9?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> (<span class="dv">5</span> <span class="sc">*</span> <span class="dv">2</span>) <span class="co"># less than or equal to?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&gt;=</span> pi <span class="co"># greater than or equal to?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">10</span> <span class="co"># equals?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">10</span> <span class="co"># does not equal?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p><code>TRUE</code> and <code>FALSE</code> objects are of “logical” data type (known as “Booleans” in many other languages, after the mathematician George Boole).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x)  <span class="co"># x points to a logical</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x)  <span class="co"># the variable x no longer points to a logical</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When working with numerical data, tests of equality can be tricky. For example, consider the following two comparisons:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> (<span class="fu">sqrt</span>(<span class="dv">10</span>)<span class="sc">^</span><span class="dv">2</span>) <span class="co"># Surprised by the result? See below.</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="sc">==</span> (<span class="fu">sqrt</span>(<span class="dv">4</span>)<span class="sc">^</span><span class="dv">2</span>) <span class="co"># Even more confused?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Mathematically we know that both <span class="math inline">\((\sqrt{10})^2 = 10\)</span> and <span class="math inline">\((\sqrt{4})^2 = 4\)</span> are true statements. Why does R tell us the first statement is false? What we’re running into here are the limits of computer precision. A computer can’t represent <span class="math inline">\(\sqrt 10\)</span> exactly, whereas <span class="math inline">\(\sqrt 4\)</span> can be exactly represented. Precision in numerical computing is a complex subject and a detailed discussion is beyond the scope of this course. However, it’s important to be aware of this limitation (this limitation is true of any programming language, not just R).</p>
+<p>To test “near equality” R provides a function called <code>all.equal()</code>. This function takes two inputs – the numerical values to be compared – and returns <code>TRUE</code> if their values are equal up to a certain level of tolerance (defined by the built-in numerical precision of your computer).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="dv">10</span>, <span class="fu">sqrt</span>(<span class="dv">10</span>)<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>Here’s another example where the simple equality operator returns an unexpected result, but <code>all.equal()</code> produces the comparison we’re likely after.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sin</span>(pi) <span class="sc">==</span> <span class="dv">0</span>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fu">sin</span>(pi), <span class="dv">0</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<section id="logical-operators" class="level4" data-number="1.7.2.1">
+<h4 data-number="1.7.2.1" class="anchored" data-anchor-id="logical-operators"><span class="header-section-number">1.7.2.1</span> Logical operators</h4>
+<p>Logical values support Boolean operations, like logical negation (“not”), “and”, “or”, “xor”, etc. This is illustrated below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span><span class="cn">TRUE</span>  <span class="co"># logical negation -- reads as "not x"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">&amp;</span> <span class="cn">FALSE</span> <span class="co"># AND: are x and y both TRUE?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">|</span> <span class="cn">FALSE</span> <span class="co"># OR: are either x or y TRUE?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">xor</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>)  <span class="co"># XOR: is either x or y TRUE, but not both?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>The function <code>isTRUE</code> can be useful for evaluating the state of a variable:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span>) <span class="co"># sample a random number in the range 1 to 10</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">isTRUE</span>(x <span class="sc">&gt;</span> <span class="dv">5</span>)  <span class="co"># was the random number picked greater than 5?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="character-strings" class="level3" data-number="1.7.3">
+<h3 data-number="1.7.3" class="anchored" data-anchor-id="character-strings"><span class="header-section-number">1.7.3</span> Character strings</h3>
+<p>Character strings (“character”) represent single textual characters or a longer sequence of characters. They are created by enclosing the characters in text either single our double quotes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="st">"abc"</span>)  <span class="co"># double quotes </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="st">'abc'</span>)  <span class="co"># single quotes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+<p>Character strings have a length, which can be found using the <code>nchar</code> function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>first.name <span class="ot">&lt;-</span> <span class="st">"jasmine"</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(first.name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>last.name <span class="ot">&lt;-</span> <span class="st">'smith'</span></span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(last.name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p>There are a number of built-in functions for manipulating character strings. Here are some of the most common ones.</p>
+<section id="joining-strings" class="level4" data-number="1.7.3.1">
+<h4 data-number="1.7.3.1" class="anchored" data-anchor-id="joining-strings"><span class="header-section-number">1.7.3.1</span> Joining strings</h4>
+<p>The <code>paste()</code> function joins two characters strings together:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(first.name, last.name)  <span class="co"># join two strings</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "jasmine smith"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"abc"</span>, <span class="st">"def"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "abc def"</code></pre>
+</div>
+</div>
+<p>Notice that <code>paste()</code> adds a space between the strings? If we didn’t want the space we can call the <code>paste()</code> function with an optional argument called <code>sep</code> (short for separator) which specifies the character(s) that are inserted between the joined strings.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"abc"</span>, <span class="st">"def"</span>, <span class="at">sep =</span> <span class="st">""</span>)  <span class="co"># join with no space; "" is an empty string</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "abcdef"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"abc"</span>, <span class="st">"def"</span>) <span class="co"># an equivalent function with no space in newer version of R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "abcdef"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"abc"</span>, <span class="st">"def"</span>, <span class="at">sep =</span> <span class="st">"|"</span>) <span class="co"># join with a vertical bar</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "abc|def"</code></pre>
+</div>
+</div>
+</section>
+<section id="splitting-strings" class="level4" data-number="1.7.3.2">
+<h4 data-number="1.7.3.2" class="anchored" data-anchor-id="splitting-strings"><span class="header-section-number">1.7.3.2</span> Splitting strings</h4>
+<p>The <code>strsplit()</code> function allows us to split a character string into substrings according to matches to a specified split string (see <code>?strsplit</code> for details). For example, we could break a sentence into it’s constituent words as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>sentence <span class="ot">&lt;-</span> <span class="st">"Call me Ishmael."</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>words <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(sentence, <span class="st">" "</span>)  <span class="co"># split on space</span></span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>words</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] "Call"     "me"       "Ishmael."</code></pre>
+</div>
+</div>
+<p>Notice that <code>strsplit()</code> is the reverse of <code>paste()</code>.</p>
+</section>
+<section id="substrings" class="level4" data-number="1.7.3.3">
+<h4 data-number="1.7.3.3" class="anchored" data-anchor-id="substrings"><span class="header-section-number">1.7.3.3</span> Substrings</h4>
+<p>The <code>substr()</code> function allows us to extract a substring from a character object by specifying the first and last positions (indices) to use in the extraction:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(<span class="st">"abcdef"</span>, <span class="dv">2</span>, <span class="dv">5</span>)  <span class="co"># get substring from characters 2 to 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "bcde"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(first.name, <span class="dv">1</span>, <span class="dv">3</span>) <span class="co"># get substring from characters 1 to       </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "jas"</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="packages" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="packages"><span class="header-section-number">1.8</span> Packages</h2>
+<p>Packages are libraries of R functions and data that provide additional capabilities and tools beyond the standard library of functions included with R. Hundreds of people around the world have developed packages for R that provide functions and related data structures for conducting many different types of analyses.</p>
+<p>Throughout this course you’ll need to install a variety of packages. Here I show the basic procedure for installing new packages from the console as well as from the R Studio interface.</p>
+<section id="installing-packages-from-the-console" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="installing-packages-from-the-console"><span class="header-section-number">1.8.1</span> Installing packages from the console</h3>
+<p>The function <code>install.packages()</code> provides a quick and conveniet way to install packages from the R console.</p>
+</section>
+<section id="install-the-tidyverse-package" class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="install-the-tidyverse-package"><span class="header-section-number">1.8.2</span> Install the tidyverse package</h3>
+<p>To illustrate the use of <code>install.packages()</code>, we’ll install a collection of packages (a “meta-package”) called the <a href="http://www.tidyverse.org">tidyverse</a>. Here’s how to install the tidyverse meta-package from the R console:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The first argument to <code>install.packages</code> gives the names of the package we want to install. The second argument, <code>dependencies = TRUE</code>, tells R to install any additional packages that tidyverse depends on.</p>
+</section>
+<section id="installing-packages-from-the-rstudio-dialog" class="level3" data-number="1.8.3">
+<h3 data-number="1.8.3" class="anchored" data-anchor-id="installing-packages-from-the-rstudio-dialog"><span class="header-section-number">1.8.3</span> Installing packages from the RStudio dialog</h3>
+<p>You can also install packages using a graphical dialog provided by RStudio. To do so pick the <code>Packages</code> tab in RStudio, and then click the <code>Install</code> button.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/fig-rstudio-packages-tab.png" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption">The Packages tab in RStudio</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the packages entry box you can type the name of the package you wish to install. Let’s install another useful package called “stringr”. Type the package name in the “Packages” field, make sure the “Install dependencies” check box is checked, and then press the “Install” button.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/fig-rstudio-package-install-stringr.png" class="img-fluid figure-img" width="300"></p>
+<p></p><figcaption class="figure-caption">Package Install Dialog</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="loading-packages-with-the-library-function" class="level3" data-number="1.8.4">
+<h3 data-number="1.8.4" class="anchored" data-anchor-id="loading-packages-with-the-library-function"><span class="header-section-number">1.8.4</span> Loading packages with the <code>library()</code> function</h3>
+<p>Once a package is installed on your computer, the package can be loaded into your R session using the <code>library</code> function. To insure our previous install commands worked correctly, let’s load one of the packages we just installed.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Since the tidyverse pacakge is a “meta-package” it provides some additional info about the sub-packages that got loaded.</p>
+<p>When you load tidyverse, you will also see a message about “Conflicts” as several of the functions provided in the dplyr package (a sub-package in tidyverse) conflict with names of functions provided by the “stats” package which usually gets automically loaded when you start R. The conflicting funcdtions are <code>filter</code> and <code>lag</code>. The conflicting functions in the stats package are <code>lag</code> and <code>filter</code> which are used in time series analysis. The <code>dplyr</code> functions are more generally useful. Furthermore, if you need these masked functions you can still access them by prefacing the function name with the name of the package (e.g.&nbsp;<code>stats::filter</code>).</p>
+<p>We will use the “tidyverse” package for almost every class session and assignment in this class. Get in the habit of including the <code>library(tidyverse)</code> statement in all of your R documents.</p>
+</section>
+</section>
+<section id="the-r-help-system" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="the-r-help-system"><span class="header-section-number">1.9</span> The R Help System</h2>
+<p>R comes with fairly extensive documentation and a simple help system. You can access HTML versions of the R documentation under the Help tab in Rstudio. The HTML documentation also includes information on any packages you’ve installed. Take a few minutes to browse through the R HTML documentation. In addition to the HTML documentation there is also a search box where you can enter a term to search on (see red arrow in figure below).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/fig-rstudio-help.png" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption">The RStudio Help tab</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="getting-help-from-the-console" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="getting-help-from-the-console"><span class="header-section-number">1.9.1</span> Getting help from the console</h3>
+<p>In addition to getting help from the RStudio help tab, you can directly search for help from the console. The help system can be invoked using the <code>help</code> function or the <code>?</code> operator.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"log"</span>)</span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>?log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you are using RStudio, the help results will appear in the “Help” tab of the Files/Plots/Packages/Help/Viewer (lower right window by default).</p>
+<p>What if you don’t know the name of the function you want? You can use the <code>help.search()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">"log"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this case <code>help.search("log")</code> returns all the functions with the string <code>log</code> in them. For more on <code>help.search</code> type <code>?help.search</code>.</p>
+<p>Other useful help related functions include <code>apropos()</code> and <code>example()</code>, <code>vignette()</code>. <code>apropos</code> returns a list of all objects (including variable names and function names) in the current session that match the input string.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">"log"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "as.data.frame.logical" "as.logical"            "as.logical.factor"    
+ [4] "dlogis"                "is.logical"            "log"                  
+ [7] "log10"                 "log1p"                 "log2"                 
+[10] "logb"                  "Logic"                 "logical"              
+[13] "logLik"                "loglin"                "plogis"               
+[16] "qlogis"                "rlogis"                "SSlogis"              </code></pre>
+</div>
+</div>
+<p><code>example()</code> provides examples of how a function is used.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">example</span>(log)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+log&gt; log(exp(3))
+[1] 3
+
+log&gt; log10(1e7) # = 7
+[1] 7
+
+log&gt; x &lt;- 10^-(1+2*1:9)
+
+log&gt; cbind(x, log(1+x), log1p(x), exp(x)-1, expm1(x))
+          x                                                    
+ [1,] 1e-03 9.995003e-04 9.995003e-04 1.000500e-03 1.000500e-03
+ [2,] 1e-05 9.999950e-06 9.999950e-06 1.000005e-05 1.000005e-05
+ [3,] 1e-07 1.000000e-07 1.000000e-07 1.000000e-07 1.000000e-07
+ [4,] 1e-09 1.000000e-09 1.000000e-09 1.000000e-09 1.000000e-09
+ [5,] 1e-11 1.000000e-11 1.000000e-11 1.000000e-11 1.000000e-11
+ [6,] 1e-13 9.992007e-14 1.000000e-13 9.992007e-14 1.000000e-13
+ [7,] 1e-15 1.110223e-15 1.000000e-15 1.110223e-15 1.000000e-15
+ [8,] 1e-17 0.000000e+00 1.000000e-17 0.000000e+00 1.000000e-17
+ [9,] 1e-19 0.000000e+00 1.000000e-19 0.000000e+00 1.000000e-19</code></pre>
+</div>
+</div>
+<p>The <code>vignette()</code> function gives longer, more detailed documentation about libraries. Not all libraries include vignettes, but for those that do it’s usually a good place to get started. For example, the stringr package (which we installed above) includes a vignette. To read it’s vignette, type the following at the console</p>
+<pre><code>vignette("stringr")</code></pre>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./R-intro-RMarkdown.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R Markdown and R Notebooks</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
