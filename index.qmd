@@ -1,3 +1,5 @@
 # Preface {.unnumbered}
 
-This book was designed for a Biology 724D: XXXX, a graduate level course offered in the Department of Biology at Duke University.
+This book is designed for Biology 724D: XXXX, a graduate level course offered in the Department of Biology at Duke University.
+
+**This is an in-progress DRAFT**. It contains errors, placeholder text, etc.
