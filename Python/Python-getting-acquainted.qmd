@@ -1,0 +1,68 @@
+# About Python
+
+Python is a programming language invented in the early 1980's by a Dutch
+programmer named Guido van Rossum who was working at the Dutch National
+Research Institute for Mathematics and Computer Science. Python is a
+high-level programming language with a simple syntax that is easy to
+learn. The language supports a variety of programming paradigms
+including procedural programming, object-oriented programming, as well
+as some functional programming idioms. The name of the language is a
+whimsical nod toward Monty Python's Flying Circus.
+
+Python has a very active development community. There is a stable core
+to the language, but new language features are also being developed.
+Python has an extensive standard library that includes facilities for a
+wide range of programming tasks. There is a very large user community
+the provides support and helps to develop an extensive set of
+third-party libraries. Python is also highly portable -- it is available
+on pretty much any computing platform you're likely to use. Python is
+also open-source and free!
+
+# Python Resources
+
+There are many resources available online and in bookstores for learning
+Python. A few handy resources are listed here:
+
+-   [Python Website](http://www.python.org/) -- the official website for
+    the programming language.
+
+-   [The Python Tutorial](http://docs.python.org/tutorial/) -- the
+    'official' Python tutorial.
+
+-   [Python Library Reference](http://docs.python.org/library/) -- a
+    reference guide to the many modules that come included with Python.
+
+-   [Think Python: How to Think Like a Computer
+    Scientist](https://greenteapress.com/wp/think-python-2e/) --
+    a free book that provides an introduction to programming using
+    Python.
+
+# Starting the Python interpreter
+
+The Python interpreter can be started in a number of ways. The simplest
+way is to open a shell (terminal) and type `python`. You can open a
+terminal as follows:
+
+-   On a Mac (OS X) run the terminal program available under
+    `Applications > Utilities`
+
+-   On Windows open up a command prompt, available from `Start Menu > Accessories`.
+
+Once you're at the command prompt type the following command:
+
+``` bash
+python
+```
+
+If everything is working correctly you should see something like:
+
+``` python
+Python 3.10.4 | packaged by conda-forge | (main, Mar 24 2022, 17:42:03) [Clang 12.0.1 ] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+```
+
+If that command didn't work, please see me for further help configuring
+your Python installation. From within the default interpretter you can
+type `Ctrl-d` (Unix, MacOS) , `Ctrl-z` (Windows) or type `quit()` to
+stop the interpreter and return to the command line.

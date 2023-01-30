@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bio724D - 7&nbsp; Bash scripts</title>
+<title>Bio724D - 8&nbsp; Bash scripts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../Unix/Unix-awk.html" rel="next">
-<link href="../R/R-ggplot-intro.html" rel="prev">
+<link href="../Python/Python-getting-acquainted.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bash scripts</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bash scripts</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -213,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Unix</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Python</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -221,12 +221,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Unix/Unix-bash.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
+  <a href="../Python/Python-getting-acquainted.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">About Python</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Unix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unix/Unix-bash.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Unix/Unix-awk.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Awk</span></a>
+  <a href="../Unix/Unix-awk.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Awk</span></a>
   </div>
 </li>
       </ul>
@@ -245,22 +260,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#writing-shell-scripts" id="toc-writing-shell-scripts" class="nav-link active" data-scroll-target="#writing-shell-scripts"><span class="toc-section-number">7.1</span>  Writing shell scripts</a></li>
-  <li><a href="#bash-scripts-are-picky" id="toc-bash-scripts-are-picky" class="nav-link" data-scroll-target="#bash-scripts-are-picky"><span class="toc-section-number">7.2</span>  Bash scripts are picky</a></li>
-  <li><a href="#simple-script-examples" id="toc-simple-script-examples" class="nav-link" data-scroll-target="#simple-script-examples"><span class="toc-section-number">7.3</span>  Simple script examples</a>
+  <li><a href="#writing-shell-scripts" id="toc-writing-shell-scripts" class="nav-link active" data-scroll-target="#writing-shell-scripts"><span class="toc-section-number">8.1</span>  Writing shell scripts</a></li>
+  <li><a href="#bash-scripts-are-picky" id="toc-bash-scripts-are-picky" class="nav-link" data-scroll-target="#bash-scripts-are-picky"><span class="toc-section-number">8.2</span>  Bash scripts are picky</a></li>
+  <li><a href="#simple-script-examples" id="toc-simple-script-examples" class="nav-link" data-scroll-target="#simple-script-examples"><span class="toc-section-number">8.3</span>  Simple script examples</a>
   <ul class="collapse">
-  <li><a href="#simple-shell-script-01" id="toc-simple-shell-script-01" class="nav-link" data-scroll-target="#simple-shell-script-01"><span class="toc-section-number">7.3.1</span>  Simple shell script 01</a></li>
-  <li><a href="#simple-shell-script-02" id="toc-simple-shell-script-02" class="nav-link" data-scroll-target="#simple-shell-script-02"><span class="toc-section-number">7.3.2</span>  Simple shell script 02</a></li>
-  <li><a href="#simple-shell-script-03" id="toc-simple-shell-script-03" class="nav-link" data-scroll-target="#simple-shell-script-03"><span class="toc-section-number">7.3.3</span>  Simple shell script 03</a></li>
-  <li><a href="#simple-shell-script-04" id="toc-simple-shell-script-04" class="nav-link" data-scroll-target="#simple-shell-script-04"><span class="toc-section-number">7.3.4</span>  Simple shell script 04</a></li>
+  <li><a href="#simple-shell-script-01" id="toc-simple-shell-script-01" class="nav-link" data-scroll-target="#simple-shell-script-01"><span class="toc-section-number">8.3.1</span>  Simple shell script 01</a></li>
+  <li><a href="#simple-shell-script-02" id="toc-simple-shell-script-02" class="nav-link" data-scroll-target="#simple-shell-script-02"><span class="toc-section-number">8.3.2</span>  Simple shell script 02</a></li>
+  <li><a href="#simple-shell-script-03" id="toc-simple-shell-script-03" class="nav-link" data-scroll-target="#simple-shell-script-03"><span class="toc-section-number">8.3.3</span>  Simple shell script 03</a></li>
+  <li><a href="#simple-shell-script-04" id="toc-simple-shell-script-04" class="nav-link" data-scroll-target="#simple-shell-script-04"><span class="toc-section-number">8.3.4</span>  Simple shell script 04</a></li>
   </ul></li>
-  <li><a href="#different-ways-of-using-bash-scripts" id="toc-different-ways-of-using-bash-scripts" class="nav-link" data-scroll-target="#different-ways-of-using-bash-scripts"><span class="toc-section-number">7.4</span>  Different ways of using Bash scripts</a>
+  <li><a href="#different-ways-of-using-bash-scripts" id="toc-different-ways-of-using-bash-scripts" class="nav-link" data-scroll-target="#different-ways-of-using-bash-scripts"><span class="toc-section-number">8.4</span>  Different ways of using Bash scripts</a>
   <ul class="collapse">
-  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility"><span class="toc-section-number">7.4.1</span>  Reproducibility</a></li>
-  <li><a href="#reusability" id="toc-reusability" class="nav-link" data-scroll-target="#reusability"><span class="toc-section-number">7.4.2</span>  Reusability</a></li>
-  <li><a href="#encapsulation-and-abstraction" id="toc-encapsulation-and-abstraction" class="nav-link" data-scroll-target="#encapsulation-and-abstraction"><span class="toc-section-number">7.4.3</span>  Encapsulation and Abstraction</a></li>
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility"><span class="toc-section-number">8.4.1</span>  Reproducibility</a></li>
+  <li><a href="#reusability" id="toc-reusability" class="nav-link" data-scroll-target="#reusability"><span class="toc-section-number">8.4.2</span>  Reusability</a></li>
+  <li><a href="#encapsulation-and-abstraction" id="toc-encapsulation-and-abstraction" class="nav-link" data-scroll-target="#encapsulation-and-abstraction"><span class="toc-section-number">8.4.3</span>  Encapsulation and Abstraction</a></li>
   </ul></li>
-  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources"><span class="toc-section-number">7.5</span>  Other resources</a></li>
+  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources"><span class="toc-section-number">8.5</span>  Other resources</a></li>
   </ul>
 </nav>
     </div>
@@ -269,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bash scripts</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bash scripts</span></h1>
 </div>
 
 
@@ -284,18 +299,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="writing-shell-scripts" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="writing-shell-scripts"><span class="header-section-number">7.1</span> Writing shell scripts</h2>
+<section id="writing-shell-scripts" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="writing-shell-scripts"><span class="header-section-number">8.1</span> Writing shell scripts</h2>
 <p>Shell scripts are small programs written in the language of the shell; they’re convenient for tying together a series of commands that you might otherwise type by hand into a repeatable and documented set of operations. Bash scripts also allow us to write new commands or programs that can be used in a manner similar to other “built-in” programs we’ve been using.</p>
 </section>
-<section id="bash-scripts-are-picky" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="bash-scripts-are-picky"><span class="header-section-number">7.2</span> Bash scripts are picky</h2>
+<section id="bash-scripts-are-picky" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="bash-scripts-are-picky"><span class="header-section-number">8.2</span> Bash scripts are picky</h2>
 <p>One annoying feature of bash scripting is that it’s particularly picky about white space around commands and arguments, because essentially it tries to execute each line as if it was written at the command line itself (<a href="https://uvesway.wordpress.com/2013/03/11/some-whitespace-pitfalls-in-bash-programming/">see</a>). When following the examples below I recommend you be careful to follow the spacing I’ve used to avoid hard to diagnose syntax errors. For this reason, bash is <em>not</em> my preferred scripting environment. However it’s so ubiquitous in bioinformatics that it’s worth learning the basics of bash.</p>
 </section>
-<section id="simple-script-examples" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="simple-script-examples"><span class="header-section-number">7.3</span> Simple script examples</h2>
-<section id="simple-shell-script-01" class="level3" data-number="7.3.1">
-<h3 data-number="7.3.1" class="anchored" data-anchor-id="simple-shell-script-01"><span class="header-section-number">7.3.1</span> Simple shell script 01</h3>
+<section id="simple-script-examples" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="simple-script-examples"><span class="header-section-number">8.3</span> Simple script examples</h2>
+<section id="simple-shell-script-01" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="simple-shell-script-01"><span class="header-section-number">8.3.1</span> Simple shell script 01</h3>
 <p>Let’s start with the simplest possible shell script – one that simply writes a message to <code>stdout</code>.</p>
 <p>Put the following code into a file named <code>tut01.sh</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tut01.sh</span></span>
@@ -304,16 +319,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> tut01.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This one line script simply called the <code>echo</code> command line tool to write text to <code>stdout</code>.</p>
 </section>
-<section id="simple-shell-script-02" class="level3" data-number="7.3.2">
-<h3 data-number="7.3.2" class="anchored" data-anchor-id="simple-shell-script-02"><span class="header-section-number">7.3.2</span> Simple shell script 02</h3>
+<section id="simple-shell-script-02" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="simple-shell-script-02"><span class="header-section-number">8.3.2</span> Simple shell script 02</h3>
 <p>That’s a pretty boring shell script. Let’s create a new version that takes as input an argument telling it what to print after the initial greeting. <code>$1</code> is how we designate the first argument from the command line.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tut02.sh</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello, </span><span class="va">$1</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This expects an argument from the command line, so run this script as follows, substituting <code>Paul</code> as appropriate:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> tut02.sh Paul</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="simple-shell-script-03" class="level3" data-number="7.3.3">
-<h3 data-number="7.3.3" class="anchored" data-anchor-id="simple-shell-script-03"><span class="header-section-number">7.3.3</span> Simple shell script 03</h3>
+<section id="simple-shell-script-03" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="simple-shell-script-03"><span class="header-section-number">8.3.3</span> Simple shell script 03</h3>
 <p>Shell scripts can create variables to hold the output of commands. This is illustrated below in which we create a variable <code>input_reversed</code> to hold the value of a computation done on the first argument to the script:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tut03.sh</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># note that rev command reverses lines of input</span></span>
@@ -323,8 +338,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> tut03.sh <span class="st">"Twas brillig and the slithey toves..."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notice that I wrapped the text in quotes. What happens if you don’t include the quotes?</p>
 </section>
-<section id="simple-shell-script-04" class="level3" data-number="7.3.4">
-<h3 data-number="7.3.4" class="anchored" data-anchor-id="simple-shell-script-04"><span class="header-section-number">7.3.4</span> Simple shell script 04</h3>
+<section id="simple-shell-script-04" class="level3" data-number="8.3.4">
+<h3 data-number="8.3.4" class="anchored" data-anchor-id="simple-shell-script-04"><span class="header-section-number">8.3.4</span> Simple shell script 04</h3>
 <p>We can get multiple arguments from the command line:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tut04.sh</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"The first argument was: </span><span class="va">$1</span><span class="st">"</span></span>
@@ -343,10 +358,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"The second argument was: </span><span class="va">$2</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="different-ways-of-using-bash-scripts" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="different-ways-of-using-bash-scripts"><span class="header-section-number">7.4</span> Different ways of using Bash scripts</h2>
-<section id="reproducibility" class="level3" data-number="7.4.1">
-<h3 data-number="7.4.1" class="anchored" data-anchor-id="reproducibility"><span class="header-section-number">7.4.1</span> Reproducibility</h3>
+<section id="different-ways-of-using-bash-scripts" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="different-ways-of-using-bash-scripts"><span class="header-section-number">8.4</span> Different ways of using Bash scripts</h2>
+<section id="reproducibility" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="reproducibility"><span class="header-section-number">8.4.1</span> Reproducibility</h3>
 <ul>
 <li><p>Did your analysis require a bunch of different steps? Could you reproduce what you did? Could you teach someone else to do it?</p></li>
 <li><p>Put each of the steps of your analysis into a bash script and save the file with a <code>.sh</code> ending. You or someone else can replicate your analysis by running <code>bash yourscriptname.sh</code>. Consider saving all such scripts you create for reproducibility purposes to a git repository.</p></li>
@@ -370,8 +385,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You can execute this script by calling it as an argument to bash:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> yeast_feature_counts.sh <span class="op">&gt;</span> yeast_features.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="reusability" class="level3" data-number="7.4.2">
-<h3 data-number="7.4.2" class="anchored" data-anchor-id="reusability"><span class="header-section-number">7.4.2</span> Reusability</h3>
+<section id="reusability" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="reusability"><span class="header-section-number">8.4.2</span> Reusability</h3>
 <ul>
 <li><p>You developed a pipeline to solve one instance of a problem. Is this a type of computation you do repeatedly or are likely to do in the future on different inputs?</p></li>
 <li><p>Create a bash script “template” by re-writing the script to include variables for specifying input and output file name, key parameters, etc.</p></li>
@@ -426,8 +441,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>and then run the script:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ecoli_feature_count.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="encapsulation-and-abstraction" class="level3" data-number="7.4.3">
-<h3 data-number="7.4.3" class="anchored" data-anchor-id="encapsulation-and-abstraction"><span class="header-section-number">7.4.3</span> Encapsulation and Abstraction</h3>
+<section id="encapsulation-and-abstraction" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="encapsulation-and-abstraction"><span class="header-section-number">8.4.3</span> Encapsulation and Abstraction</h3>
 <ul>
 <li><p>You developed a pipeline that carries out a useful computation that you want to integrate into other analyses or pipelines</p></li>
 <li><p>Use a bash script to turn your pipeline into a command that can be integrated into other pipelines, following the Unix philosophy. From the user’s perspective, you can think of this as “abstracting away” the details of how the analysis works. They no longer have to understand the details of how the program or command works, they simply have to know what data to call it with and the form of the output.</p>
@@ -473,8 +488,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="va">celegans_url</span><span class="op">=</span>https://ftp.ncbi.nlm.nih.gov/genomes/refseq/invertebrate/Caenorhabditis_elegans/reference/GCF_000002985.6_WBcel235/GCF_000002985.6_WBcel235_genomic.gff.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And then call the bash script</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">feature_count.sh</span> <span class="va">$celegans_url</span> celegans</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="back-to-reproducibility" class="level4" data-number="7.4.3.1">
-<h4 data-number="7.4.3.1" class="anchored" data-anchor-id="back-to-reproducibility"><span class="header-section-number">7.4.3.1</span> Back to reproducibility</h4>
+<section id="back-to-reproducibility" class="level4" data-number="8.4.3.1">
+<h4 data-number="8.4.3.1" class="anchored" data-anchor-id="back-to-reproducibility"><span class="header-section-number">8.4.3.1</span> Back to reproducibility</h4>
 <p>By encapsulating our pipeline we’ve made it reusable and generalizable to analyses of arbitrary GFF annotation files. However, we’ve lost an element of reproducibility because we’re no longer documenting the data sources used when we invoke it at the command line. Luckily it’s easy to restore that with – you guessed it – another bash script!</p>
 <p>To illustrate this, let’s assume we wanted to compare feature counts across multiple genomes. Let’s put species names and corresponding RefSeq URLs in a CSV file called <code>genomelist.csv</code>:</p>
 <pre class="csv"><code>Saccharomyces_cerevisiae,https://ftp.ncbi.nlm.nih.gov/genomes/refseq/fungi/Saccharomyces_cerevisiae/reference/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.gff.gz
@@ -505,8 +520,8 @@ Caenorhabditis_elegans,https://ftp.ncbi.nlm.nih.gov/genomes/refseq/invertebrate/
 </section>
 </section>
 </section>
-<section id="other-resources" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="other-resources"><span class="header-section-number">7.5</span> Other resources</h2>
+<section id="other-resources" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="other-resources"><span class="header-section-number">8.5</span> Other resources</h2>
 <p>The above is a short intro to bash scripting. Some other useful resources include:</p>
 <ul>
 <li>https://linuxconfig.org/bash-scripting-tutorial-for-beginners – provides a good overview of bash</li>
@@ -652,13 +667,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../R/R-ggplot-intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Introduction to ggplot2</span></span>
+      <a href="../Python/Python-getting-acquainted.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">About Python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../Unix/Unix-awk.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Awk</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Awk</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

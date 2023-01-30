@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bio724D - 8&nbsp; Awk</title>
+<title>Bio724D - 9&nbsp; Awk</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Awk</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Awk</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -213,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Unix</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Python</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -221,12 +221,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Unix/Unix-bash.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
+  <a href="../Python/Python-getting-acquainted.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">About Python</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Unix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unix/Unix-bash.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Unix/Unix-awk.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Awk</span></a>
+  <a href="../Unix/Unix-awk.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Awk</span></a>
   </div>
 </li>
       </ul>
@@ -245,17 +260,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#simple-examples" id="toc-simple-examples" class="nav-link active" data-scroll-target="#simple-examples"><span class="toc-section-number">8.1</span>  Simple examples</a></li>
-  <li><a href="#awk-delimiters" id="toc-awk-delimiters" class="nav-link" data-scroll-target="#awk-delimiters"><span class="toc-section-number">8.2</span>  Awk delimiters</a></li>
-  <li><a href="#pattern-action-syntax" id="toc-pattern-action-syntax" class="nav-link" data-scroll-target="#pattern-action-syntax"><span class="toc-section-number">8.3</span>  <code>pattern {action}</code> syntax</a></li>
-  <li><a href="#multiple-rules-and-awk-scripts" id="toc-multiple-rules-and-awk-scripts" class="nav-link" data-scroll-target="#multiple-rules-and-awk-scripts"><span class="toc-section-number">8.4</span>  Multiple rules and Awk scripts</a></li>
-  <li><a href="#variables-in-awk" id="toc-variables-in-awk" class="nav-link" data-scroll-target="#variables-in-awk"><span class="toc-section-number">8.5</span>  Variables in Awk</a>
+  <li><a href="#simple-examples" id="toc-simple-examples" class="nav-link active" data-scroll-target="#simple-examples"><span class="toc-section-number">9.1</span>  Simple examples</a></li>
+  <li><a href="#awk-delimiters" id="toc-awk-delimiters" class="nav-link" data-scroll-target="#awk-delimiters"><span class="toc-section-number">9.2</span>  Awk delimiters</a></li>
+  <li><a href="#pattern-action-syntax" id="toc-pattern-action-syntax" class="nav-link" data-scroll-target="#pattern-action-syntax"><span class="toc-section-number">9.3</span>  <code>pattern {action}</code> syntax</a></li>
+  <li><a href="#multiple-rules-and-awk-scripts" id="toc-multiple-rules-and-awk-scripts" class="nav-link" data-scroll-target="#multiple-rules-and-awk-scripts"><span class="toc-section-number">9.4</span>  Multiple rules and Awk scripts</a></li>
+  <li><a href="#variables-in-awk" id="toc-variables-in-awk" class="nav-link" data-scroll-target="#variables-in-awk"><span class="toc-section-number">9.5</span>  Variables in Awk</a>
   <ul class="collapse">
-  <li><a href="#numerical-variables" id="toc-numerical-variables" class="nav-link" data-scroll-target="#numerical-variables"><span class="toc-section-number">8.5.1</span>  Numerical variables</a></li>
-  <li><a href="#string-variables" id="toc-string-variables" class="nav-link" data-scroll-target="#string-variables"><span class="toc-section-number">8.5.2</span>  String variables</a></li>
+  <li><a href="#numerical-variables" id="toc-numerical-variables" class="nav-link" data-scroll-target="#numerical-variables"><span class="toc-section-number">9.5.1</span>  Numerical variables</a></li>
+  <li><a href="#string-variables" id="toc-string-variables" class="nav-link" data-scroll-target="#string-variables"><span class="toc-section-number">9.5.2</span>  String variables</a></li>
   </ul></li>
-  <li><a href="#arrays-in-awk" id="toc-arrays-in-awk" class="nav-link" data-scroll-target="#arrays-in-awk"><span class="toc-section-number">8.6</span>  Arrays in Awk</a></li>
-  <li><a href="#some-useful-awk-constructs" id="toc-some-useful-awk-constructs" class="nav-link" data-scroll-target="#some-useful-awk-constructs"><span class="toc-section-number">8.7</span>  Some useful Awk constructs</a></li>
+  <li><a href="#arrays-in-awk" id="toc-arrays-in-awk" class="nav-link" data-scroll-target="#arrays-in-awk"><span class="toc-section-number">9.6</span>  Arrays in Awk</a></li>
+  <li><a href="#some-useful-awk-constructs" id="toc-some-useful-awk-constructs" class="nav-link" data-scroll-target="#some-useful-awk-constructs"><span class="toc-section-number">9.7</span>  Some useful Awk constructs</a></li>
   </ul>
 </nav>
     </div>
@@ -264,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Awk</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Awk</span></h1>
 </div>
 
 
@@ -280,8 +295,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>Awk (<code>awk</code>) is a programming language designed for processing structured text files. You can use it to write short one liners or to write full blown programs. We’ll use Awk to illustrate how you might transitions from simple command line usage into slightly more complicated scripts.</p>
-<section id="simple-examples" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="simple-examples"><span class="header-section-number">8.1</span> Simple examples</h2>
+<section id="simple-examples" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="simple-examples"><span class="header-section-number">9.1</span> Simple examples</h2>
 <p>One simple thing we can do with Awk is to use it to re-order fields in a structured data file:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'{print $2, $1, $3}'</span> columns.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The text in quotes represents the Awk program which we’re apply to the file <code>columns.txt</code>. The dollar signs followed by numbers refer to the fields of the file. With it’s default setting <code>awk</code> operates line by line, so you can interpret the above statement as saying:</p>
@@ -289,13 +304,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>“for each line, print the fields 2, 1, and 3”.</p>
 </blockquote>
 </section>
-<section id="awk-delimiters" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="awk-delimiters"><span class="header-section-number">8.2</span> Awk delimiters</h2>
+<section id="awk-delimiters" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="awk-delimiters"><span class="header-section-number">9.2</span> Awk delimiters</h2>
 <p>By default, Awk recognizes any non printing character including spaces to delineate fields/columns. If we want to be specific about the character used as a delimiter, we can set the <code>-F</code> or <code>--field-separator</code> option. For example to use tabs as the delimiter we could do:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span><span class="st">'\t'</span> <span class="st">'{print $2, $1, $3}'</span> columns.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="pattern-action-syntax" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="pattern-action-syntax"><span class="header-section-number">8.3</span> <code>pattern {action}</code> syntax</h2>
+<section id="pattern-action-syntax" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="pattern-action-syntax"><span class="header-section-number">9.3</span> <code>pattern {action}</code> syntax</h2>
 <p>The basic syntax of <code>awk</code> is often depicted in the form <code>pattern {action}</code>. The above command only specified an action, so it was applied to every line. By contrast, in the example below we specify both a pattern and an action. The pattern can be read as – “if the 2nd field is ‘chromosome’”. For all lines that match that pattern the corresponding action is applied; in this case the action is “print fields 1 and 4” (the chromosome name and its length):</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'$2=="chromosome" {print $1, $4}'</span> yeast_features.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Here’s another <code>pattern {action}</code> pair that shows how we could find all gene features with length less than 300 and count them:</p>
@@ -304,8 +319,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In this last example we add one more condition – we use a regular expression against the 6th field (<code>$6 ~ /../</code>) to look for the string “orf_classification=Dubious”. The results indicate that about a third of these small gene features have been classified as “dubious” (i.e.&nbsp;may not actually code for proteins).</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'$2 == "gene" &amp;&amp; ($4 - $3 + 1) &lt; 300 &amp;&amp; $6 ~ /orf_classification=Dubious/ {print $0 }'</span> yeast_features.txt <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="multiple-rules-and-awk-scripts" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="multiple-rules-and-awk-scripts"><span class="header-section-number">8.4</span> Multiple rules and Awk scripts</h2>
+<section id="multiple-rules-and-awk-scripts" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="multiple-rules-and-awk-scripts"><span class="header-section-number">9.4</span> Multiple rules and Awk scripts</h2>
 <p>So far our <code>pattern {action}</code> rules have matched focused on single patterns. However, you can specify multiple matching rules and do different computations depending on which one matches. For example, if we wanted to count genes and mRNAs simultaneously in an annotation file and then print out the counts at the end, we can construct a awk call with three rules:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'$2 == "gene" {gene_ct += 1} $2 == "mRNA" {mRNA_ct += 1} END {print gene_ct, mRNA_ct}'</span> yeast_features.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>At this point the command line is getting a little out of control so it would be better to put the rules into a file we can call. In your editor create a file called <code>count_genes_mRNAs.awk</code> with the following contents:</p>
@@ -324,15 +339,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This file works exactly like our command line version, but it has the advantages that it’s easier to read and thus easier to debug or modify. To call this Awk program from the command line we use the <code>-f</code> option to specify the script:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-f</span> count-genes-mRNAs.awk yeast_features.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="variables-in-awk" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="variables-in-awk"><span class="header-section-number">8.5</span> Variables in Awk</h2>
+<section id="variables-in-awk" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="variables-in-awk"><span class="header-section-number">9.5</span> Variables in Awk</h2>
 <p>The prior example introduced the use of “variables” in Awk. Variables store values; in Awk that are only two variable types, strings and numbers.</p>
-<section id="numerical-variables" class="level3" data-number="8.5.1">
-<h3 data-number="8.5.1" class="anchored" data-anchor-id="numerical-variables"><span class="header-section-number">8.5.1</span> Numerical variables</h3>
+<section id="numerical-variables" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="numerical-variables"><span class="header-section-number">9.5.1</span> Numerical variables</h3>
 <p>In the example above <code>gene_ct</code> and <code>mRNA_ct</code> are numerical variables. In Awk, when a numerical value is first created (initialized) it’s automatically assigned the value zero. In this example we used these variables in lines that look like <code>gene_ct += 1</code>; the <code>+=</code> operator is a short-hand way of saying “add the value on the right to the value of the variable on the left” so this statement is equivalent to the slightly wordier <code>gene_ct = gene_ct + 1</code>.</p>
 </section>
-<section id="string-variables" class="level3" data-number="8.5.2">
-<h3 data-number="8.5.2" class="anchored" data-anchor-id="string-variables"><span class="header-section-number">8.5.2</span> String variables</h3>
+<section id="string-variables" class="level3" data-number="9.5.2">
+<h3 data-number="9.5.2" class="anchored" data-anchor-id="string-variables"><span class="header-section-number">9.5.2</span> String variables</h3>
 <p>String variables are created by wrapping characters in double quotes.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode awk code-with-copy"><code class="sourceCode awk"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>awk 'BEGIN <span class="op">{</span>a <span class="op">=</span> <span class="st">"Hello"</span><span class="op">;</span> b <span class="op">=</span> <span class="st">"World"</span><span class="op">;</span> <span class="kw">print</span> a b<span class="op">}</span>'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can get the length of a string using the <code>length()</code> function:</p>
@@ -345,8 +360,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="arrays-in-awk" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="arrays-in-awk"><span class="header-section-number">8.6</span> Arrays in Awk</h2>
+<section id="arrays-in-awk" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="arrays-in-awk"><span class="header-section-number">9.6</span> Arrays in Awk</h2>
 <p>Most programming languages have a core set of “data structures” which specify different ways of storing and accessing values. In Awk the core data structure is called an array. It has some superficial similarities to arrays (sometimes called lists) in other languages, but also has some features that are fairly unique to Awk.</p>
 <p>An array can be thought of being made up of a contiguous set of slots or positions where we can store values. Each slot has an associated label that we call its index (plural indices). In most languages array indices are integers, with the first position indexed by successive integer values (some languages start indexing the 0, others with 1). In Awk, array indices can be either numbers or strings. This makes arrays in Awk a little like a combination between what other languages might call an array (or list) and a dictionary (hash map).</p>
 <p>Here are some illustrations of using arrays in Awk:</p>
@@ -385,8 +400,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>For a full exposition on Awk’s arrays, read the Gawk manual on the <a href="https://www.gnu.org/software/gawk/manual/html_node/Array-Basics.html">Basics of Arrays</a>. Here I illustrate some basic uses of arrays.</p>
 </section>
-<section id="some-useful-awk-constructs" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="some-useful-awk-constructs"><span class="header-section-number">8.7</span> Some useful Awk constructs</h2>
+<section id="some-useful-awk-constructs" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="some-useful-awk-constructs"><span class="header-section-number">9.7</span> Some useful Awk constructs</h2>
 <ul>
 <li><p><code>BEGIN {action}</code> – do the specified action before reading any input</p></li>
 <li><p><code>END {action}</code> – do the specified action after reading all input</p></li>
@@ -568,7 +583,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../Unix/Unix-bash.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bash scripts</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bash scripts</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

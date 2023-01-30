@@ -18,6 +18,9 @@ book:
       - R/R-intro-RMarkdown.qmd
       - R/R-dplyr-intro.qmd
       - R/R-ggplot-intro.qmd
+    - part: "Python"
+      chapters:
+      - Python/Python-getting-acquainted.qmd
     - part: "Unix"
       chapters:
       - Unix/Unix-bash.qmd
