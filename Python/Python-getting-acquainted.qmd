@@ -1,4 +1,4 @@
-# About Python
+# Introduction to Python
 
 Python is a programming language invented in the early 1980's by a Dutch
 programmer named Guido van Rossum who was working at the Dutch National
@@ -18,7 +18,7 @@ third-party libraries. Python is also highly portable -- it is available
 on pretty much any computing platform you're likely to use. Python is
 also open-source and free!
 
-# Python Resources
+## Python Resources
 
 There are many resources available online and in bookstores for learning
 Python. A few handy resources are listed here:
@@ -37,7 +37,7 @@ Python. A few handy resources are listed here:
     a free book that provides an introduction to programming using
     Python.
 
-# Starting the Python interpreter
+## Starting the Python interpreter
 
 The Python interpreter can be started in a number of ways. The simplest
 way is to open a shell (terminal) and type `python`. You can open a
