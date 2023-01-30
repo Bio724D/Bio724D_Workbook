@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bio724D - 3&nbsp; Introduction to dplyr</title>
+<title>Bio724D - 5&nbsp; Introduction to dplyr</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -163,7 +163,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">R</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Computing Basics</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -171,22 +171,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./R-getting-started.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting Started with R</span></a>
+  <a href="./Computing_basics/local-computing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Local computing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./R-intro-RMarkdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R Markdown and R Notebooks</span></a>
+  <a href="./Computing_basics/remote-computing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Remote computing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">R</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R-getting-started.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting Started with R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./R-dplyr-intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></a>
+  <a href="./R-intro-RMarkdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Markdown and R Notebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./R-ggplot-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to ggplot2</span></a>
+  <a href="./R-dplyr-intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R-ggplot-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Introduction to ggplot2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -198,20 +218,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Unix</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Unix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Unix-bash.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
+  <a href="./Unix/Unix-bash.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Unix-awk.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Awk</span></a>
+  <a href="./Unix/Unix-awk.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Awk</span></a>
   </div>
 </li>
       </ul>
@@ -225,36 +245,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#libraries" id="toc-libraries" class="nav-link active" data-scroll-target="#libraries"><span class="toc-section-number">3.1</span>  Libraries</a></li>
-  <li><a href="#reading-data-with-the-readr-package" id="toc-reading-data-with-the-readr-package" class="nav-link" data-scroll-target="#reading-data-with-the-readr-package"><span class="toc-section-number">3.2</span>  Reading data with the <code>readr</code> package</a>
+  <li><a href="#libraries" id="toc-libraries" class="nav-link active" data-scroll-target="#libraries"><span class="toc-section-number">5.1</span>  Libraries</a></li>
+  <li><a href="#reading-data-with-the-readr-package" id="toc-reading-data-with-the-readr-package" class="nav-link" data-scroll-target="#reading-data-with-the-readr-package"><span class="toc-section-number">5.2</span>  Reading data with the <code>readr</code> package</a>
   <ul class="collapse">
-  <li><a href="#reading-excel-files" id="toc-reading-excel-files" class="nav-link" data-scroll-target="#reading-excel-files"><span class="toc-section-number">3.2.1</span>  Reading Excel files</a></li>
-  <li><a href="#example-data-nc-births" id="toc-example-data-nc-births" class="nav-link" data-scroll-target="#example-data-nc-births"><span class="toc-section-number">3.2.2</span>  Example data: NC Births</a></li>
+  <li><a href="#reading-excel-files" id="toc-reading-excel-files" class="nav-link" data-scroll-target="#reading-excel-files"><span class="toc-section-number">5.2.1</span>  Reading Excel files</a></li>
+  <li><a href="#example-data-nc-births" id="toc-example-data-nc-births" class="nav-link" data-scroll-target="#example-data-nc-births"><span class="toc-section-number">5.2.2</span>  Example data: NC Births</a></li>
   </ul></li>
-  <li><a href="#a-note-on-tibbles" id="toc-a-note-on-tibbles" class="nav-link" data-scroll-target="#a-note-on-tibbles"><span class="toc-section-number">3.3</span>  A note on “tibbles”</a></li>
-  <li><a href="#data-filtering-and-transformation-with-dplyr" id="toc-data-filtering-and-transformation-with-dplyr" class="nav-link" data-scroll-target="#data-filtering-and-transformation-with-dplyr"><span class="toc-section-number">3.4</span>  Data filtering and transformation with <code>dplyr</code></a></li>
-  <li><a href="#dplyrs-verbs" id="toc-dplyrs-verbs" class="nav-link" data-scroll-target="#dplyrs-verbs"><span class="toc-section-number">3.5</span>  dplyr’s “verbs”</a>
+  <li><a href="#a-note-on-tibbles" id="toc-a-note-on-tibbles" class="nav-link" data-scroll-target="#a-note-on-tibbles"><span class="toc-section-number">5.3</span>  A note on “tibbles”</a></li>
+  <li><a href="#data-filtering-and-transformation-with-dplyr" id="toc-data-filtering-and-transformation-with-dplyr" class="nav-link" data-scroll-target="#data-filtering-and-transformation-with-dplyr"><span class="toc-section-number">5.4</span>  Data filtering and transformation with <code>dplyr</code></a></li>
+  <li><a href="#dplyrs-verbs" id="toc-dplyrs-verbs" class="nav-link" data-scroll-target="#dplyrs-verbs"><span class="toc-section-number">5.5</span>  dplyr’s “verbs”</a>
   <ul class="collapse">
-  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select"><span class="toc-section-number">3.5.1</span>  <code>select</code></a></li>
-  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter"><span class="toc-section-number">3.5.2</span>  <code>filter</code></a></li>
-  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><span class="toc-section-number">3.5.3</span>  <code>mutate</code></a></li>
-  <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange"><span class="toc-section-number">3.5.4</span>  <code>arrange</code></a></li>
-  <li><a href="#summarize" id="toc-summarize" class="nav-link" data-scroll-target="#summarize"><span class="toc-section-number">3.5.5</span>  <code>summarize</code></a></li>
-  <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by"><span class="toc-section-number">3.5.6</span>  <code>group_by</code></a></li>
-  <li><a href="#combining-grouping-and-summarizing" id="toc-combining-grouping-and-summarizing" class="nav-link" data-scroll-target="#combining-grouping-and-summarizing"><span class="toc-section-number">3.5.7</span>  Combining grouping and summarizing</a></li>
-  <li><a href="#scoped-variants-of-mutate-and-summarize" id="toc-scoped-variants-of-mutate-and-summarize" class="nav-link" data-scroll-target="#scoped-variants-of-mutate-and-summarize"><span class="toc-section-number">3.5.8</span>  Scoped variants of <code>mutate</code> and <code>summarize</code></a></li>
-  <li><a href="#combining-summarize-with-grouping-aesthetics-in-ggplot2" id="toc-combining-summarize-with-grouping-aesthetics-in-ggplot2" class="nav-link" data-scroll-target="#combining-summarize-with-grouping-aesthetics-in-ggplot2"><span class="toc-section-number">3.5.9</span>  Combining summarize with grouping aesthetics in <code>ggplot2</code></a></li>
+  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select"><span class="toc-section-number">5.5.1</span>  <code>select</code></a></li>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter"><span class="toc-section-number">5.5.2</span>  <code>filter</code></a></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><span class="toc-section-number">5.5.3</span>  <code>mutate</code></a></li>
+  <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange"><span class="toc-section-number">5.5.4</span>  <code>arrange</code></a></li>
+  <li><a href="#summarize" id="toc-summarize" class="nav-link" data-scroll-target="#summarize"><span class="toc-section-number">5.5.5</span>  <code>summarize</code></a></li>
+  <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by"><span class="toc-section-number">5.5.6</span>  <code>group_by</code></a></li>
+  <li><a href="#combining-grouping-and-summarizing" id="toc-combining-grouping-and-summarizing" class="nav-link" data-scroll-target="#combining-grouping-and-summarizing"><span class="toc-section-number">5.5.7</span>  Combining grouping and summarizing</a></li>
+  <li><a href="#scoped-variants-of-mutate-and-summarize" id="toc-scoped-variants-of-mutate-and-summarize" class="nav-link" data-scroll-target="#scoped-variants-of-mutate-and-summarize"><span class="toc-section-number">5.5.8</span>  Scoped variants of <code>mutate</code> and <code>summarize</code></a></li>
+  <li><a href="#combining-summarize-with-grouping-aesthetics-in-ggplot2" id="toc-combining-summarize-with-grouping-aesthetics-in-ggplot2" class="nav-link" data-scroll-target="#combining-summarize-with-grouping-aesthetics-in-ggplot2"><span class="toc-section-number">5.5.9</span>  Combining summarize with grouping aesthetics in <code>ggplot2</code></a></li>
   </ul></li>
-  <li><a href="#pipes" id="toc-pipes" class="nav-link" data-scroll-target="#pipes"><span class="toc-section-number">3.6</span>  Pipes</a>
+  <li><a href="#pipes" id="toc-pipes" class="nav-link" data-scroll-target="#pipes"><span class="toc-section-number">5.6</span>  Pipes</a>
   <ul class="collapse">
-  <li><a href="#install-and-load-magrittr" id="toc-install-and-load-magrittr" class="nav-link" data-scroll-target="#install-and-load-magrittr"><span class="toc-section-number">3.6.1</span>  Install and load <code>magrittr</code></a></li>
-  <li><a href="#the-basic-pipe-operator" id="toc-the-basic-pipe-operator" class="nav-link" data-scroll-target="#the-basic-pipe-operator"><span class="toc-section-number">3.6.2</span>  The basic pipe operator</a></li>
-  <li><a href="#an-example-without-pipes" id="toc-an-example-without-pipes" class="nav-link" data-scroll-target="#an-example-without-pipes"><span class="toc-section-number">3.6.3</span>  An example without pipes</a></li>
-  <li><a href="#the-same-example-using-pipes" id="toc-the-same-example-using-pipes" class="nav-link" data-scroll-target="#the-same-example-using-pipes"><span class="toc-section-number">3.6.4</span>  The same example using pipes</a></li>
-  <li><a href="#assigning-the-output-of-a-statement-involving-pipes-to-a-variable" id="toc-assigning-the-output-of-a-statement-involving-pipes-to-a-variable" class="nav-link" data-scroll-target="#assigning-the-output-of-a-statement-involving-pipes-to-a-variable"><span class="toc-section-number">3.6.5</span>  Assigning the output of a statement involving pipes to a variable</a></li>
-  <li><a href="#compound-assignment-pipe-operator" id="toc-compound-assignment-pipe-operator" class="nav-link" data-scroll-target="#compound-assignment-pipe-operator"><span class="toc-section-number">3.6.6</span>  Compound assignment pipe operator</a></li>
-  <li><a href="#the-dot-operator-with-pipes" id="toc-the-dot-operator-with-pipes" class="nav-link" data-scroll-target="#the-dot-operator-with-pipes"><span class="toc-section-number">3.6.7</span>  The dot operator with pipes</a></li>
-  <li><a href="#the-exposition-pipe-operator" id="toc-the-exposition-pipe-operator" class="nav-link" data-scroll-target="#the-exposition-pipe-operator"><span class="toc-section-number">3.6.8</span>  The exposition pipe operator</a></li>
+  <li><a href="#install-and-load-magrittr" id="toc-install-and-load-magrittr" class="nav-link" data-scroll-target="#install-and-load-magrittr"><span class="toc-section-number">5.6.1</span>  Install and load <code>magrittr</code></a></li>
+  <li><a href="#the-basic-pipe-operator" id="toc-the-basic-pipe-operator" class="nav-link" data-scroll-target="#the-basic-pipe-operator"><span class="toc-section-number">5.6.2</span>  The basic pipe operator</a></li>
+  <li><a href="#an-example-without-pipes" id="toc-an-example-without-pipes" class="nav-link" data-scroll-target="#an-example-without-pipes"><span class="toc-section-number">5.6.3</span>  An example without pipes</a></li>
+  <li><a href="#the-same-example-using-pipes" id="toc-the-same-example-using-pipes" class="nav-link" data-scroll-target="#the-same-example-using-pipes"><span class="toc-section-number">5.6.4</span>  The same example using pipes</a></li>
+  <li><a href="#assigning-the-output-of-a-statement-involving-pipes-to-a-variable" id="toc-assigning-the-output-of-a-statement-involving-pipes-to-a-variable" class="nav-link" data-scroll-target="#assigning-the-output-of-a-statement-involving-pipes-to-a-variable"><span class="toc-section-number">5.6.5</span>  Assigning the output of a statement involving pipes to a variable</a></li>
+  <li><a href="#compound-assignment-pipe-operator" id="toc-compound-assignment-pipe-operator" class="nav-link" data-scroll-target="#compound-assignment-pipe-operator"><span class="toc-section-number">5.6.6</span>  Compound assignment pipe operator</a></li>
+  <li><a href="#the-dot-operator-with-pipes" id="toc-the-dot-operator-with-pipes" class="nav-link" data-scroll-target="#the-dot-operator-with-pipes"><span class="toc-section-number">5.6.7</span>  The dot operator with pipes</a></li>
+  <li><a href="#the-exposition-pipe-operator" id="toc-the-exposition-pipe-operator" class="nav-link" data-scroll-target="#the-exposition-pipe-operator"><span class="toc-section-number">5.6.8</span>  The exposition pipe operator</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -264,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></h1>
 </div>
 
 
@@ -280,23 +300,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>In today’s class we introduce a new package, <code>dplyr</code>, which, along with ggplot2 will be used in almost every class session. We will also introduce the <code>readr</code> package, for reading tabular data.</p>
-<section id="libraries" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="libraries"><span class="header-section-number">3.1</span> Libraries</h2>
+<section id="libraries" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="libraries"><span class="header-section-number">5.1</span> Libraries</h2>
 <p>Both <code>readr</code> and <code>dplyr</code> are members of the tidyverse, so a single invocation of <code>library()</code> makes the functions defined in these two packages available for our use:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="reading-data-with-the-readr-package" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="reading-data-with-the-readr-package"><span class="header-section-number">3.2</span> Reading data with the <code>readr</code> package</h2>
+<section id="reading-data-with-the-readr-package" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="reading-data-with-the-readr-package"><span class="header-section-number">5.2</span> Reading data with the <code>readr</code> package</h2>
 <p>The <a href="http://readr.tidyverse.org"><code>readr</code></a> package defines a number of functions for reading data tables from common file formats like Comma-Separated-Value (CSV) and Tab-Separated-Value (TSV) files.</p>
 <p>The two most frequently used <code>readr</code> functions we’ll use in this class are <code>read_csv()</code> and <code>read_tsv()</code> for reading CSV and TSV files respectively. There are some variants of these basic function, which you can read about by invoking the help system (<code>?read_csv</code>).</p>
-<section id="reading-excel-files" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="reading-excel-files"><span class="header-section-number">3.2.1</span> Reading Excel files</h3>
+<section id="reading-excel-files" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="reading-excel-files"><span class="header-section-number">5.2.1</span> Reading Excel files</h3>
 <p>The tidyverse also includes a package called <a href="http://readxl.tidyverse.org"><code>readxl</code></a> which can be used to read Excel spreadsheets (recent versions with <code>.xls</code> and <code>.xlsx</code> extensions). Excel files are somewhat more complicated to deal with because they can include separate “sheets”. We won’t use <code>readxl</code> in this class, but documentation and examples of how <code>readxl</code> is used can be found at the page linked above.</p>
 </section>
-<section id="example-data-nc-births" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="example-data-nc-births"><span class="header-section-number">3.2.2</span> Example data: NC Births</h3>
+<section id="example-data-nc-births" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="example-data-nc-births"><span class="header-section-number">5.2.2</span> Example data: NC Births</h3>
 <p>For today’s hands on session we’ll use a data set that contains information on 150 cases of mothers and their newborns in North Carolina in 2004. This data set is available at the following URL:</p>
 <ul>
 <li>https://github.com/Bio723-class/example-datasets/raw/master/nc-births.txt</li>
@@ -336,8 +356,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 </div>
 </section>
 </section>
-<section id="a-note-on-tibbles" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="a-note-on-tibbles"><span class="header-section-number">3.3</span> A note on “tibbles”</h2>
+<section id="a-note-on-tibbles" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="a-note-on-tibbles"><span class="header-section-number">5.3</span> A note on “tibbles”</h2>
 <p>You may have noticed that most of the functions defined in tidyverse related packages return not data frames, but rather something called a “tibble”. You can think about tibbles as light-weight data frames. In fact if you ask about the “class” of a tibble you’ll see that it includes <code>data.frame</code> as one of it’s classes as well as <code>tbl</code> and <code>tbl_df</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(births)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -351,12 +371,12 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 </div>
 <p>For more details about tibbles, see the <a href="http://r4ds.had.co.nz/tibbles.html">Tibbles chapter in R for Data Analysis</a>.</p>
 </section>
-<section id="data-filtering-and-transformation-with-dplyr" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="data-filtering-and-transformation-with-dplyr"><span class="header-section-number">3.4</span> Data filtering and transformation with <code>dplyr</code></h2>
+<section id="data-filtering-and-transformation-with-dplyr" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="data-filtering-and-transformation-with-dplyr"><span class="header-section-number">5.4</span> Data filtering and transformation with <code>dplyr</code></h2>
 <p><code>dplyr</code> is powerful tool for data filter and transformation. In the same way that <code>ggplot2</code> attempts to provide a “grammar of graphics”, <code>dplyr</code> aims to provide a “grammar of data manipulation”. In today’s material we will see how <code>dplyr</code> complements and simplifies standard data frame indexing and subsetting operations. However, <code>dplyr</code> is focused only on data frames and doesn’t completely replace the basic subsetting operations, and so being adept with both <code>dplyr</code> and the indexing approaches we’ve seen previously is important. If you’re curious about the name “dplyr”, the package’s originator Hadley Wickham says it’s supposed to invoke the idea of pliers for data frames (<a href="https://github.com/tidyverse/dplyr/issues/1857">Github: Meaning of dplyrs name</a>)</p>
 </section>
-<section id="dplyrs-verbs" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="dplyrs-verbs"><span class="header-section-number">3.5</span> dplyr’s “verbs”</h2>
+<section id="dplyrs-verbs" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="dplyrs-verbs"><span class="header-section-number">5.5</span> dplyr’s “verbs”</h2>
 <p>The primary functions in the <code>dplyr</code> package can be thought of as a set of “verbs”, each verb corresponding to a common data manipulation task. Some of the most frequently used verbs/functions in <code>dplyr</code> include:</p>
 <ul>
 <li><code>select</code> – select columns</li>
@@ -367,8 +387,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 <li><code>group_by</code> – split data frame on some grouping variable. Can be powerfully combined with <code>summarize</code></li>
 </ul>
 <p>All of these functions return new data frames rather than modifying the existing data frame (though some of the functions support in place modification of data frames via optional arguments).We illustrate these below by example using the NC births data.</p>
-<section id="select" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="select"><span class="header-section-number">3.5.1</span> <code>select</code></h3>
+<section id="select" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="select"><span class="header-section-number">5.5.1</span> <code>select</code></h3>
 <p>The <code>select</code> function subsets the columns (variables) of a data frame. For example, to select just the weeks and weight columns from the births data set we could do:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note I'm prefixing select with the package name (dplyr)</span></span>
@@ -417,8 +437,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 <li>When using functions defined in <code>dplyr</code> and <code>ggplot2</code> variable names are (usually) not quoted or used with the <code>$</code> operator. This is a design feature of these libraries and makes it easier to carry out interactive analyes because it saves a fair amount of typing.</li>
 </ul>
 </section>
-<section id="filter" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="filter"><span class="header-section-number">3.5.2</span> <code>filter</code></h3>
+<section id="filter" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="filter"><span class="header-section-number">5.5.2</span> <code>filter</code></h3>
 <p>The <code>filter</code> function returns those rows of the data set that meet the given logical criterion.</p>
 <p>For example, to get all the premature babies in the data set we could use filter as so:</p>
 <div class="cell">
@@ -446,8 +466,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>premies.or.oldmom <span class="ot">&lt;-</span> <span class="fu">filter</span>(births, premature <span class="sc">==</span> <span class="st">"premie"</span> <span class="sc">|</span> fAge <span class="sc">&gt;</span> <span class="dv">35</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="mutate" class="level3" data-number="3.5.3">
-<h3 data-number="3.5.3" class="anchored" data-anchor-id="mutate"><span class="header-section-number">3.5.3</span> <code>mutate</code></h3>
+<section id="mutate" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="mutate"><span class="header-section-number">5.5.3</span> <code>mutate</code></h3>
 <p>The <code>mutate</code> function creates a new data frame that is the same as input data frame but with additional variables (columns) as specified by the function arguments. In the example below, I create two new variables, <code>weight.in.kg</code> and a <code>mom.smoked</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># to make code more readable it's sometime useful to spread out</span></span>
@@ -477,8 +497,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">mom.smoked =</span> (births<span class="sc">$</span>smoke <span class="sc">==</span> <span class="st">"smoker"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="arrange" class="level3" data-number="3.5.4">
-<h3 data-number="3.5.4" class="anchored" data-anchor-id="arrange"><span class="header-section-number">3.5.4</span> <code>arrange</code></h3>
+<section id="arrange" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="arrange"><span class="header-section-number">5.5.4</span> <code>arrange</code></h3>
 <p>Arrange creates a new data frame where the rows are sorted according to their values for one or more variables. For example, to sort by mothers age we could do:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>young.moms.first <span class="ot">&lt;-</span> <span class="fu">arrange</span>(births, mAge)</span>
@@ -544,8 +564,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 </div>
 </div>
 </section>
-<section id="summarize" class="level3" data-number="3.5.5">
-<h3 data-number="3.5.5" class="anchored" data-anchor-id="summarize"><span class="header-section-number">3.5.5</span> <code>summarize</code></h3>
+<section id="summarize" class="level3" data-number="5.5.5">
+<h3 data-number="5.5.5" class="anchored" data-anchor-id="summarize"><span class="header-section-number">5.5.5</span> <code>summarize</code></h3>
 <p><code>summarize</code> applies a function of interest to one or more variables in a data frame, reducing a vector of values to a single value and returning the results in a data frame. This is most often used to calculate statistics like means, medians, count, etc. As we’ll see below, this is powerful when combined with the <code>group_by</code> function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(births, </span>
@@ -581,8 +601,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 </div>
 </div>
 </section>
-<section id="group_by" class="level3" data-number="3.5.6">
-<h3 data-number="3.5.6" class="anchored" data-anchor-id="group_by"><span class="header-section-number">3.5.6</span> <code>group_by</code></h3>
+<section id="group_by" class="level3" data-number="5.5.6">
+<h3 data-number="5.5.6" class="anchored" data-anchor-id="group_by"><span class="header-section-number">5.5.6</span> <code>group_by</code></h3>
 <p>The <code>group_by</code> function implicitly adds grouping information to a data frame.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># group the births by whether mom smoked or not</span></span>
@@ -612,8 +632,8 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>by_smoking.and.mAge <span class="ot">&lt;-</span> <span class="fu">group_by</span>(births, smoke, mAge <span class="sc">&gt;</span> <span class="dv">35</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="combining-grouping-and-summarizing" class="level3" data-number="3.5.7">
-<h3 data-number="3.5.7" class="anchored" data-anchor-id="combining-grouping-and-summarizing"><span class="header-section-number">3.5.7</span> Combining grouping and summarizing</h3>
+<section id="combining-grouping-and-summarizing" class="level3" data-number="5.5.7">
+<h3 data-number="5.5.7" class="anchored" data-anchor-id="combining-grouping-and-summarizing"><span class="header-section-number">5.5.7</span> Combining grouping and summarizing</h3>
 <p>Grouped data frames can be combined with the <code>summarize</code> function we saw above. For example, if we wanted to calculate mean birth weight, broken down by whether the baby’s mother smoked or not we could call <code>summarize</code> with our <code>by_smoking</code> grouped data frame:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(by_smoking, <span class="at">mean.wt =</span> <span class="fu">mean</span>(weight))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -644,11 +664,11 @@ dbl (6): fAge, mAge, weeks, visits, gained, weight
 </div>
 </div>
 </section>
-<section id="scoped-variants-of-mutate-and-summarize" class="level3" data-number="3.5.8">
-<h3 data-number="3.5.8" class="anchored" data-anchor-id="scoped-variants-of-mutate-and-summarize"><span class="header-section-number">3.5.8</span> Scoped variants of <code>mutate</code> and <code>summarize</code></h3>
+<section id="scoped-variants-of-mutate-and-summarize" class="level3" data-number="5.5.8">
+<h3 data-number="5.5.8" class="anchored" data-anchor-id="scoped-variants-of-mutate-and-summarize"><span class="header-section-number">5.5.8</span> Scoped variants of <code>mutate</code> and <code>summarize</code></h3>
 <p>Both the <code>mutate()</code> and <code>summarize()</code> functions provide “scoped” alternatives, that allow us to apply the operation on a selection of variables. These variants are often used in combination with grouping. We’ll look at the <code>summarize</code> versions – <code>summarize_all()</code>, <code>summarize_at()</code>, and <code>summarize_if()</code>. See the documentation (<code>?mutate_all</code>) for descriptions of the <code>mutate</code> versions.</p>
-<section id="summarize_all" class="level4" data-number="3.5.8.1">
-<h4 data-number="3.5.8.1" class="anchored" data-anchor-id="summarize_all"><span class="header-section-number">3.5.8.1</span> <code>summarize_all()</code></h4>
+<section id="summarize_all" class="level4" data-number="5.5.8.1">
+<h4 data-number="5.5.8.1" class="anchored" data-anchor-id="summarize_all"><span class="header-section-number">5.5.8.1</span> <code>summarize_all()</code></h4>
 <p><code>summarize_all()</code> applies a one or more functions to all columns in a data frame. Here we illustrate a simple version of this with the iris data:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># group by species</span></span>
@@ -713,8 +733,8 @@ logical: returning NA</code></pre>
 </div>
 <p>Note that the non-numeric data columns still lead to NA values.</p>
 </section>
-<section id="summarize_if" class="level4" data-number="3.5.8.2">
-<h4 data-number="3.5.8.2" class="anchored" data-anchor-id="summarize_if"><span class="header-section-number">3.5.8.2</span> <code>summarize_if()</code></h4>
+<section id="summarize_if" class="level4" data-number="5.5.8.2">
+<h4 data-number="5.5.8.2" class="anchored" data-anchor-id="summarize_if"><span class="header-section-number">5.5.8.2</span> <code>summarize_if()</code></h4>
 <p><code>summarize_if()</code> is similar to <code>summarize_all()</code>, except it only applies the function of interest to those variables that match a particular predicate (i.e.&nbsp;are TRUE for a particular TRUE/FALSE test).</p>
 <p>Here we use <code>summarize_if()</code> to apply the <code>mean()</code> function to only those variables (columns) that are numeric.</p>
 <div class="cell">
@@ -729,8 +749,8 @@ logical: returning NA</code></pre>
 </div>
 </div>
 </section>
-<section id="summarize_at" class="level4" data-number="3.5.8.3">
-<h4 data-number="3.5.8.3" class="anchored" data-anchor-id="summarize_at"><span class="header-section-number">3.5.8.3</span> <code>summarize_at()</code></h4>
+<section id="summarize_at" class="level4" data-number="5.5.8.3">
+<h4 data-number="5.5.8.3" class="anchored" data-anchor-id="summarize_at"><span class="header-section-number">5.5.8.3</span> <code>summarize_at()</code></h4>
 <p><code>summarize_at()</code> allows us to apply functions of interest only to specific variables.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate mean of gained and weight variables, grouped by smoking status</span></span>
@@ -783,8 +803,8 @@ logical: returning NA</code></pre>
 </div>
 </section>
 </section>
-<section id="combining-summarize-with-grouping-aesthetics-in-ggplot2" class="level3" data-number="3.5.9">
-<h3 data-number="3.5.9" class="anchored" data-anchor-id="combining-summarize-with-grouping-aesthetics-in-ggplot2"><span class="header-section-number">3.5.9</span> Combining summarize with grouping aesthetics in <code>ggplot2</code></h3>
+<section id="combining-summarize-with-grouping-aesthetics-in-ggplot2" class="level3" data-number="5.5.9">
+<h3 data-number="5.5.9" class="anchored" data-anchor-id="combining-summarize-with-grouping-aesthetics-in-ggplot2"><span class="header-section-number">5.5.9</span> Combining summarize with grouping aesthetics in <code>ggplot2</code></h3>
 <p>We’ve already seen an instance of grouping (conditioning) when we used aesthetics like color or fill to distinguish subgroups in different types of statistical graphics. Below is an example where we integrate information from a <code>group_by</code>/<code>summarize</code> operation into a plot:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate mean weights, conditioned on smoking status</span></span>
@@ -805,19 +825,19 @@ logical: returning NA</code></pre>
 </div>
 </section>
 </section>
-<section id="pipes" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="pipes"><span class="header-section-number">3.6</span> Pipes</h2>
+<section id="pipes" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="pipes"><span class="header-section-number">5.6</span> Pipes</h2>
 <p><code>dplyr</code> includes a very useful operator available called a pipe available to us. Pipes are powerful because they allow us to chain together sets of operations in a very intuitive fashion while minimizing nested function calls. We can think of pipes as taking the output of one function and feeding it as the <em>first argument</em> to another function call, where we’ve already specified the subsequent arguments.</p>
 <p>Pipes are actually defined in another packaged called <code>magrittr</code>. We’ll look at the basic pipe operator and then look at a few additional “special” pipes that <code>magrittr</code> provides.</p>
-<section id="install-and-load-magrittr" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="install-and-load-magrittr"><span class="header-section-number">3.6.1</span> Install and load <code>magrittr</code></h3>
+<section id="install-and-load-magrittr" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="install-and-load-magrittr"><span class="header-section-number">5.6.1</span> Install and load <code>magrittr</code></h3>
 <p>In magrittr in not already installed, install it via the command line or the RStudio GUI. Having done so, you will need to load magrittr via the <code>library()</code> function:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="the-basic-pipe-operator" class="level3" data-number="3.6.2">
-<h3 data-number="3.6.2" class="anchored" data-anchor-id="the-basic-pipe-operator"><span class="header-section-number">3.6.2</span> The basic pipe operator</h3>
+<section id="the-basic-pipe-operator" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="the-basic-pipe-operator"><span class="header-section-number">5.6.2</span> The basic pipe operator</h3>
 <p>The pipe operator is designated by <code>%&gt;%</code>. Using pipes, the expression <code>x %&gt;% f()</code> is equivalent to <code>f(x)</code> and the expression <code>x %&gt;% f(y)</code> is equivalent to <code>f(x,y)</code>. The documentation on pipes (see <code>?magrittr</code>) uses the notation <code>lhs %&gt;% rhs</code> where <code>lhs</code> and <code>rhs</code> are short for “left-hand side” and “right-hand side” respectively. I’ll use this same notation in some of the explanations that follow.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>births <span class="sc">%&gt;%</span> <span class="fu">head</span>()   <span class="co"># same as head(births)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -903,8 +923,8 @@ logical: returning NA</code></pre>
 </div>
 </div>
 </section>
-<section id="an-example-without-pipes" class="level3" data-number="3.6.3">
-<h3 data-number="3.6.3" class="anchored" data-anchor-id="an-example-without-pipes"><span class="header-section-number">3.6.3</span> An example without pipes</h3>
+<section id="an-example-without-pipes" class="level3" data-number="5.6.3">
+<h3 data-number="5.6.3" class="anchored" data-anchor-id="an-example-without-pipes"><span class="header-section-number">5.6.3</span> An example without pipes</h3>
 <p>To illustrate how pipes help us, first let’s look at an example set of analysis steps without using pipes. Let’s say we wanted to explore the relationship between father’s age and baby’s birth weight. We’ll start this process of exploration by generating a bivariate scatter plot. Being good scientists we want to express our data in SI units, so we’ll need to converts pounds to kilograms. You’ll also recall that a number of the cases have missing data on father’s age, so we’ll want to remove those before we plot them. Here’s how we might accomplish these steps:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a new column for weight in kg</span></span>
@@ -931,8 +951,8 @@ logical: returning NA</code></pre>
 <span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Father's Age (years)"</span>, <span class="at">y =</span> <span class="st">"Birth Weight (kg)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="the-same-example-using-pipes" class="level3" data-number="3.6.4">
-<h3 data-number="3.6.4" class="anchored" data-anchor-id="the-same-example-using-pipes"><span class="header-section-number">3.6.4</span> The same example using pipes</h3>
+<section id="the-same-example-using-pipes" class="level3" data-number="5.6.4">
+<h3 data-number="5.6.4" class="anchored" data-anchor-id="the-same-example-using-pipes"><span class="header-section-number">5.6.4</span> The same example using pipes</h3>
 <p>The pipe operator makes the output of one statement (<code>lhs</code>) as the first input of a following function (<code>rhs</code>). This simplifies the above example to:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>births <span class="sc">%&gt;%</span></span>
@@ -948,8 +968,8 @@ logical: returning NA</code></pre>
 <p>In the example above, we feed the data frame into the <code>mutate</code> function. <code>mutate</code> expects a data frame as a first argument, and subsequent arguments specify the new variables to be created. <code>births %&gt;% mutate(weight.kg = weight / 2.2)</code> is thus equivalent to <code>mutate(births, weight.kg = weight / 2.2))</code>. We then pipe the output to <code>filter</code>, removing NA fathers, and then pipe that output as the input to ggplot.</p>
 <p>As mentioned previously, it’s good coding style to write each discrete step as its own line when using piping. This make it easier to understand what the steps of the analysis are as well as facilitating changes to the code (commenting out lines, adding lines, etc)</p>
 </section>
-<section id="assigning-the-output-of-a-statement-involving-pipes-to-a-variable" class="level3" data-number="3.6.5">
-<h3 data-number="3.6.5" class="anchored" data-anchor-id="assigning-the-output-of-a-statement-involving-pipes-to-a-variable"><span class="header-section-number">3.6.5</span> Assigning the output of a statement involving pipes to a variable</h3>
+<section id="assigning-the-output-of-a-statement-involving-pipes-to-a-variable" class="level3" data-number="5.6.5">
+<h3 data-number="5.6.5" class="anchored" data-anchor-id="assigning-the-output-of-a-statement-involving-pipes-to-a-variable"><span class="header-section-number">5.6.5</span> Assigning the output of a statement involving pipes to a variable</h3>
 <p>It’s important to recognize that pipes are simply a convenient way to chain together a series of expression. Just like any other compound expression, the output of a series of pipe statements can be assigned to a variable, like so:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>stats.old.moms <span class="ot">&lt;-</span></span>
@@ -968,28 +988,28 @@ logical: returning NA</code></pre>
 </div>
 <p>Note that our summary table, <code>stats.old.moms</code>, is itself a data frame.</p>
 </section>
-<section id="compound-assignment-pipe-operator" class="level3" data-number="3.6.6">
-<h3 data-number="3.6.6" class="anchored" data-anchor-id="compound-assignment-pipe-operator"><span class="header-section-number">3.6.6</span> Compound assignment pipe operator</h3>
+<section id="compound-assignment-pipe-operator" class="level3" data-number="5.6.6">
+<h3 data-number="5.6.6" class="anchored" data-anchor-id="compound-assignment-pipe-operator"><span class="header-section-number">5.6.6</span> Compound assignment pipe operator</h3>
 <p>A fairly common operation when working interactively in R is to update an existing data frame. <code>magrittr</code> defines another pipe operator – <code>%&lt;&gt;%</code> – called the “compound assignment” pipe operator, to facilitate this. The compound assignment pipe operator has the basic usage <code>lhs %&lt;&gt;% rhs</code>. This operator evaluates the function on the <code>rhs</code> using the <code>lhs</code> as the first argument, and <em>then</em> updates the <code>lhs</code> with the resulting value. This is simply shorthand for writing <code>lhs &lt;- lhs %&gt;% rhs</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>stats.old.moms <span class="sc">%&lt;&gt;%</span>  <span class="co"># note compound pipe operator!</span></span>
 <span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean.weight.kg =</span> mean.weight <span class="sc">/</span> <span class="fl">2.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="the-dot-operator-with-pipes" class="level3" data-number="3.6.7">
-<h3 data-number="3.6.7" class="anchored" data-anchor-id="the-dot-operator-with-pipes"><span class="header-section-number">3.6.7</span> The dot operator with pipes</h3>
+<section id="the-dot-operator-with-pipes" class="level3" data-number="5.6.7">
+<h3 data-number="5.6.7" class="anchored" data-anchor-id="the-dot-operator-with-pipes"><span class="header-section-number">5.6.7</span> The dot operator with pipes</h3>
 <p>When working with pipes, sometimes you’ll want to use the <code>lhs</code> in multiple places on the <code>rhs</code>, or as something other than the first argument to the <code>rhs</code>. <code>magrittr</code> provides for this situation by using the dot (<code>.</code>) operator as a placeholder. Using the dot operator, the expression <code>y %&gt;% f(x, .)</code> is equivalent to <code>f(x,y)</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"dog"</span>, <span class="st">"cakes"</span>, <span class="st">"sauce"</span>, <span class="st">"house"</span>) <span class="sc">%&gt;%</span>  <span class="co"># create a vector</span></span>
 <span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample</span>(<span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="co"># pick a random single element of that vector</span></span>
 <span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_c</span>(<span class="st">"hot"</span>, .)  <span class="co"># string concatenate the pick with the word "hot"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "hotcakes"</code></pre>
+<pre><code>[1] "hotsauce"</code></pre>
 </div>
 </div>
 </section>
-<section id="the-exposition-pipe-operator" class="level3" data-number="3.6.8">
-<h3 data-number="3.6.8" class="anchored" data-anchor-id="the-exposition-pipe-operator"><span class="header-section-number">3.6.8</span> The exposition pipe operator</h3>
+<section id="the-exposition-pipe-operator" class="level3" data-number="5.6.8">
+<h3 data-number="5.6.8" class="anchored" data-anchor-id="the-exposition-pipe-operator"><span class="header-section-number">5.6.8</span> The exposition pipe operator</h3>
 <p><code>magrittr</code> defines another operator called the “exposition pipe operator”, designed <code>%$%</code>. This operator exposes the names in the <code>lhs</code> to the expression on the <code>rhs</code>.</p>
 <p>Here is an example of using the exposition pipe operator to simply return the vector of weights:</p>
 <div class="cell">
@@ -1152,12 +1172,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./R-intro-RMarkdown.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R Markdown and R Notebooks</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Markdown and R Notebooks</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./R-ggplot-intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to ggplot2</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Introduction to ggplot2</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

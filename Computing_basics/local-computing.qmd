@@ -1,0 +1,8 @@
+
+# Local computing
+
+{{< include local-filesystems.md >}}
+
+{{< include local-terminal.md >}}
+
+{{< include navigating-filesystems.md >}}

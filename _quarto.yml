@@ -8,6 +8,10 @@ book:
   date: "2023"
   chapters:
     - index.qmd
+    - part: "Computing Basics"
+      chapters:
+      - Computing_basics/local-computing.qmd
+      - Computing_basics/remote-computing.qmd
     - part: "R"
       chapters:
       - R-getting-started.qmd
@@ -17,14 +21,15 @@ book:
       - references.qmd
     - part: "Unix"
       chapters:
-      - Unix-bash.qmd
-      - Unix-awk.qmd
+      - Unix/Unix-bash.qmd
+      - Unix/Unix-awk.qmd
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
+    code-overflow: wrap
   pdf:
     documentclass: scrreprt
 

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bio724D - 1&nbsp; Local computing</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Computing_basics/remote-computing.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Local computing</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Bio724D</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Computing Basics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Computing_basics/local-computing.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Local computing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Computing_basics/remote-computing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Remote computing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">R</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R-getting-started.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting Started with R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R-intro-RMarkdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Markdown and R Notebooks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R-dplyr-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to <code>dplyr</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R-ggplot-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Introduction to ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Unix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unix/Unix-bash.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bash scripts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unix/Unix-awk.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Awk</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#mac-os" id="toc-mac-os" class="nav-link active" data-scroll-target="#mac-os"><span class="toc-section-number">1.1</span>  Mac OS</a></li>
+  <li><a href="#windows-1011" id="toc-windows-1011" class="nav-link" data-scroll-target="#windows-1011"><span class="toc-section-number">1.2</span>  Windows 10/11</a></li>
+  <li><a href="#both" id="toc-both" class="nav-link" data-scroll-target="#both"><span class="toc-section-number">1.3</span>  Both</a></li>
+  <li><a href="#recommendations-for-file-naming-schemes" id="toc-recommendations-for-file-naming-schemes" class="nav-link" data-scroll-target="#recommendations-for-file-naming-schemes"><span class="toc-section-number">1.4</span>  Recommendations for file naming schemes</a></li>
+  <li><a href="#terminology" id="toc-terminology" class="nav-link" data-scroll-target="#terminology"><span class="toc-section-number">1.5</span>  Terminology</a></li>
+  <li><a href="#mac-os-1" id="toc-mac-os-1" class="nav-link" data-scroll-target="#mac-os-1"><span class="toc-section-number">1.6</span>  Mac OS</a></li>
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows"><span class="toc-section-number">1.7</span>  Windows</a></li>
+  <li><a href="#commands-for-navigating-the-file-system-on-unix-based-systems" id="toc-commands-for-navigating-the-file-system-on-unix-based-systems" class="nav-link" data-scroll-target="#commands-for-navigating-the-file-system-on-unix-based-systems"><span class="toc-section-number">1.8</span>  Commands for navigating the file system on Unix based systems</a></li>
+  <li><a href="#shortcuts-for-working-with-the-file-system" id="toc-shortcuts-for-working-with-the-file-system" class="nav-link" data-scroll-target="#shortcuts-for-working-with-the-file-system"><span class="toc-section-number">1.9</span>  Shortcuts for working with the file system</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Local computing</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="mac-os" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="mac-os"><span class="header-section-number">1.1</span> Mac OS</h2>
+<ul>
+<li>Root = <code>/</code></li>
+<li>Other disks (USB, etc.) mounted under <code>/Volumes</code></li>
+<li>User directories under <code>/Users</code>; your home directory at <code>/Users/yourusername</code></li>
+<li>System wide applications under <code>/Applications</code>; users can also install applications under <code>/Users/username/Applicatons</code></li>
+<li>User specific config files under <code>/Users/username/Library</code> (hidden by default)</li>
+<li>Unix related executables under <code>/bin</code>, <code>/sbin</code>, etc.</li>
+<li><code>PATH</code> is an environment variable, settable from command line or <code>~/.profile</code></li>
+</ul>
+</section>
+<section id="windows-1011" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="windows-1011"><span class="header-section-number">1.2</span> Windows 10/11</h2>
+<ul>
+<li>Root = <code>C:\</code></li>
+<li>Other disks mounted as <code>D:\</code>, <code>E:</code>, etc.</li>
+<li>User directories under <code>C:\Users</code>; your home directory at <code>C:\Users\yourusername</code></li>
+<li>System wide applications under <code>c:\Program Files</code> (64 bit) and <code>C:\Program Files (x86)</code> (32 bit)</li>
+<li><code>Path</code> variable settable from “System Properties” dialog</li>
+</ul>
+</section>
+<section id="both" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="both"><span class="header-section-number">1.3</span> Both</h2>
+<ul>
+<li><p>Standard shortcuts like “Desktop”, “Documents”, and “Downloads” are usually subdirectories of your home directory</p></li>
+<li><p>Hidden files and directories can be viewed by setting appropriate options in Finder / Explorer</p></li>
+</ul>
+</section>
+<section id="recommendations-for-file-naming-schemes" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="recommendations-for-file-naming-schemes"><span class="header-section-number">1.4</span> Recommendations for file naming schemes</h2>
+<ul>
+<li><p>Avoid spaces (or other non-printing characters) and punctuation other than dashes, underscores, and periods in file names</p></li>
+<li><p>File names that include dates should preferably follow the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 formatting standard</a>, which has the form “YYYY-MM-DD”. For example, an experiment done of Jan 12, 2022 should be named something like “2022-01-12-Expt01.csv”.</p>
+<ul>
+<li>The advantage of this is it makes it easy to sort and search by date</li>
+</ul></li>
+<li><p>Try and be consistent in your naming schemes. I promise this will make your life (and/or that of your collaborators) easier at some point in your research career!</p></li>
+<li><p>See further recommendations from <a href="https://instr.iastate.libguides.com/datashare/filenames">Iowa Stat University’s Open Research Data Repository</a></p></li>
+</ul>
+</section>
+<section id="terminology" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="terminology"><span class="header-section-number">1.5</span> Terminology</h2>
+<ul>
+<li>A “terminal” is a text input/output environment for interacting with your computer. A terminal used to be a physical device attached to a computer. Strictly speaking, these days we run “terminal emulators” – graphical programs that emulate terminals.</li>
+<li>A “shell” is a program that runs in a terminal that processes and interprets the command you type. You can run different shells in the same terminal.</li>
+</ul>
+</section>
+<section id="mac-os-1" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="mac-os-1"><span class="header-section-number">1.6</span> Mac OS</h2>
+<ul>
+<li>Terminal accessed by running “Terminal” program (in the “Applications/Utilities” folder)</li>
+<li>Default shell is <a href="https://www.zsh.org/">zsh</a>; but bash also included by default (invoke at command line by typing <code>bash</code>)</li>
+</ul>
+</section>
+<section id="windows" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="windows"><span class="header-section-number">1.7</span> Windows</h2>
+<ul>
+<li>Default terminal is “Command Prompt” but new “Windows Terminal” is better choice</li>
+<li>Several options for shell but I recommend “PowerShell”</li>
+</ul>
+</section>
+<section id="commands-for-navigating-the-file-system-on-unix-based-systems" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="commands-for-navigating-the-file-system-on-unix-based-systems"><span class="header-section-number">1.8</span> Commands for navigating the file system on Unix based systems</h2>
+<p>NOTE: The following commands also work in Windows PowerShell</p>
+<ul>
+<li><code>pwd</code> – prints name of your “working” directory (i.e.&nbsp;the directory you’re currently in)</li>
+<li><code>ls</code> – lists the contents of the working directory</li>
+<li><code>cd</code> – change directory
+<ul>
+<li><code>cd Downloads</code></li>
+<li><code>cd ~</code> (move to your home directory)</li>
+</ul></li>
+<li><code>mkdir</code> – make a new directory
+<ul>
+<li><code>mkdir foo_dir</code></li>
+<li><code>mkdir bar_dir</code></li>
+</ul></li>
+<li><code>rmdir</code> – remove a directory (must be empty)
+<ul>
+<li><code>rmdir bar_dir</code><br>
+</li>
+</ul></li>
+<li><code>rm</code> – remove a file
+<ul>
+<li><code>rm bar.txt</code></li>
+</ul></li>
+<li><code>cp</code> – copy a file
+<ul>
+<li><code>cp foo.txt foo_copy.txt</code></li>
+</ul></li>
+<li><code>mv</code> – move a file or directory
+<ul>
+<li><code>mv foo.txt baz.txt</code></li>
+<li><code>mv foo_dir foo.dir</code></li>
+</ul></li>
+<li><code>cat</code> – write the contents of a file to the terminal:
+<ul>
+<li><code>cat foo.txt</code></li>
+</ul></li>
+<li><code>more</code> – a pager program. View the contents of a file, one page at a time. Type <code>&lt;space&gt;</code> to advance pages, <code>q</code> to quit.</li>
+</ul>
+<p>Side note: Why is it common to use names like <code>foo</code>, <code>bar</code>, and <code>baz</code> in examples? See https://en.wikipedia.org/wiki/Foobar</p>
+</section>
+<section id="shortcuts-for-working-with-the-file-system" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="shortcuts-for-working-with-the-file-system"><span class="header-section-number">1.9</span> Shortcuts for working with the file system</h2>
+<ul>
+<li><code>~</code> – refers to the users home directory.
+<ul>
+<li><code>cd ~</code> = change to my home directory</li>
+<li><code>ls ~/*.txt</code> = list all files ending with the prefix <code>.txt</code> in your home directory</li>
+</ul></li>
+<li><code>.</code> – the current directory
+<ul>
+<li><code>cd ./tmp</code> = move to the directory called <code>tmp</code> that is located in the directory the <code>cd</code> command is executed from.<br>
+</li>
+</ul></li>
+<li><code>..</code> – the directory above the current directory (if it exists)
+<ul>
+<li><code>cd ..</code> = move up one level in the directory hierarchy. For example if <code>pwd</code> is <code>/home/jsmith</code> then <code>cd ..</code> moves you to <code>/home</code></li>
+</ul></li>
+<li><code>/</code> – the root directory of the file system</li>
+<li><code>cd /data</code> = move to the <code>data</code> directory that is the subdirectory of the root</li>
+<li><code>ls /</code> = list all files and directories in the root directory</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Computing_basics/remote-computing.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Remote computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
