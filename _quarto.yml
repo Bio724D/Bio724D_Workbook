@@ -14,15 +14,15 @@ book:
       - Computing_basics/remote-computing.qmd
     - part: "R"
       chapters:
-      - R-getting-started.qmd
-      - R-intro-RMarkdown.qmd
-      - R-dplyr-intro.qmd
-      - R-ggplot-intro.qmd
-      - references.qmd
+      - R/R-getting-started.qmd
+      - R/R-intro-RMarkdown.qmd
+      - R/R-dplyr-intro.qmd
+      - R/R-ggplot-intro.qmd
     - part: "Unix"
       chapters:
       - Unix/Unix-bash.qmd
       - Unix/Unix-awk.qmd
+    - references.qmd
 
 bibliography: references.bib
 
